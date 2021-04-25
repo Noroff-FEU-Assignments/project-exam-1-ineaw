@@ -1,0 +1,120 @@
+:root {
+  --main: #fae8df;
+  --headers: #325637;
+  --accent: #654a4e;
+  --highlight: #b9e1bf;
+  --logo: #121f13;
+  --headerbg: #d37d7cda;
+}
+
+/* =====
+typography
+===== */
+
+/* =====
+Hero
+===== */
+
+.hero {
+  background-image: url(../images/Monstera.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 400px;
+  padding-bottom: 4rem;
+  border: 2px solid magenta;
+}
+
+/*  display: grid;
+    grid-template-columns: minmax(1em, 2fr) minmax(0, 0) minmax(1em, 3fr); 
+     */
+
+.hero-header {
+  background-color: var(--headerbg);
+  width: 100%;
+  max-width: 300px;
+  color: white;
+  margin: 0 auto;
+  padding: 1em;
+  float: right;
+  border: 2px solid magenta;
+}
+
+.hero-title {
+  border: 2px solid magenta;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 35px;
+}
+
+.hero-btn {
+  border: 2px solid magenta;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  /* margin-top: 15em; */
+}
+
+.hero-link {
+  background-color: #654a4eb9;
+  font-family: "roboto mono", Helvetica, sans-serif;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-left: 0;
+}
+
+.hero-btn a {
+  color: #ffffff;
+}
+
+/* =====
+  Featured Posts Carousel
+  ===== */
+
+.post-carousel {
+  background-color: var(--accent);
+}
+
+/* =====
+Main body
+==== */
+
+.news,
+.latest-posts,
+.post-carousel,
+.popular-posts,
+.newsletter {
+  padding: 2em;
+}
+
+/* headline news section */
+.news-text {
+  max-width: 70%;
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: var(--highlight);
+}
+
+.newsletter-topic h2,
+.newsletter p {
+  color: var(--headers);
+  text-align: center;
+}
+
+/* Popular categories */
+
+/* =====
+Footer
+===== */
+
+/* Mobile Screens */
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 900px) {
+}
