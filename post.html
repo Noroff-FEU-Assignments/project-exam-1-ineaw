@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Post : The Green Side Blog</title>
+    <meta name="description" content="Blog for plant nerds with information and facts about house plants and how to care for them" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,12 +12,14 @@
     <script src="https://kit.fontawesome.com/40834ce6db.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Prata&display=swap" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet" />
+    <link href="css/post.css" rel="stylesheet" />
   </head>
   <body>
     <a class="logo" href="index.html">
       <h1>The Green Side</h1>
     </a>
-    <header class="header header-home main-grid">
+    <header class="header">
       <div class="header-content">
         <button aria-label="Open navigation" class="open-nav">&#9776;</button>
         <nav class="nav">
@@ -31,28 +34,36 @@
       </div>
     </header>
     <main>
-      <div class="post post-container">
-        <figure class="post-image">
-          <img src="#" />
-          <figcaption class="blog-date">By Ine AW. Posted <time datetime="2021-04-21">April 21</time></figcaption>
-        </figure>
-        <h2>Post Header</h2>
-        <p><strong>Plant plant be Green</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-        <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-        <h3>Header two</h3>
-        <p><strong>Plant plant be Green</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-        <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-      </div>
-      <section class="care-info">
-        <h3>Care</h3>
-      </section>
+      <article class="post">
+        <section class="post-container">
+          <figure class="post-image">
+            <img src="/images/Monstera.jpg" />
+            <figcaption class="blog-date">By Ine AW. Posted <time datetime="2021-04-21">April 21</time></figcaption>
+          </figure>
+          <div class="blog-text">
+            <h2>Post Header</h2>
+            <p><strong>Plant plant be Green</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <h3>Header two</h3>
+            <p><strong>Plant plant be Green</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          </div>
+        </section>
+        <section class="care-info">
+          <h3>Care</h3>
+          <div aria-label="sunlight" class="sun">&#x1F31E;</div>
+        </section>
+        <aside class="sideposts">
+          <h2 class="sideposts-header">Recent posts</h2>
+          <div class="sideposts-recent">
+            <h3>How to care for Airplants</h3>
+            <p><strong>Plant plant be Green</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          </div>
+        </aside>
+      </article>
     </main>
-    <aside class="sidebar">
-      <h2 class="sidebar-header">Recent posts</h2>
-      <div class="siderbar-recent-post">
-        <h3>How to care for Airplants</h3>
-      </div>
-    </aside>
+
     <footer class="footer">
       <section>
         <ul class="footer-main">
