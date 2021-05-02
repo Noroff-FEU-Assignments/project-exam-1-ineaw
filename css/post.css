@@ -2,14 +2,12 @@ body {
   margin: 0 auto;
 }
 
-.post-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+/* ======
+Blog Post
+====== */
 
 .post {
-  padding: 2em 2em;
+  padding: 2em 4em;
   display: grid;
   justify-content: center;
   gap: 2em;
@@ -20,12 +18,32 @@ body {
     "careinfo"
     "sidebar";
 }
+
+.post-header {
+  margin: 30px;
+}
+
+.sideposts-header,
+.post-subheader,
+.sideposts-recent,
+.care-info-header {
+  margin: 10px 0px 10px 0px;
+}
+
+/* Blog post content */
+
 .post-image img {
   grid-area: postimage;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .blog-text {
   grid-area: blogtext;
+  max-width: 700px;
+  min-width: 300px;
+  margin: 0 auto;
 }
 
 .care-info {
@@ -35,6 +53,10 @@ body {
 .sideposts {
   grid-area: sidebar;
 }
+
+/* ======
+Media Queries
+====== */
 
 @media (min-width: 800px) {
   .post {

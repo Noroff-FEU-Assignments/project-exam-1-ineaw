@@ -75,7 +75,7 @@ Main Navigation
 .header-content {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .nav__link,
@@ -120,11 +120,6 @@ Main Navigation
   text-decoration: none;
   font-size: 2rem;
 }
-
-/* .nav-link:hover,
-.nav-link:focus {
-  color: var(--headers);
-} */
 
 .close-nav {
   border: 0;
@@ -193,12 +188,6 @@ Media Queries
   .nav-link {
     font-size: 1rem;
   }
-
-  /* .nav-link:hover,
-  .nav-link:focus {
-    background-color: white;
-    transition: ease-in-out 250ms;
-  } */
 
   .header-home .nav {
     background: transparent;
