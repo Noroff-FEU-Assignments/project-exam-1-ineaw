@@ -173,7 +173,7 @@ Recent posts & Newsletter
   max-width: 500px;
 }
 .newsletter input {
-  padding: 0.7em;
+  padding: 0.2em;
   border: none;
   background-color: var(--highlight);
   margin-right: 10px;

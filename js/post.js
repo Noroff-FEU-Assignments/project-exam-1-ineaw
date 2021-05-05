@@ -1,6 +1,7 @@
 const postContainer = document.querySelector(".post-container");
 
 const postImage = document.querySelector(".post-image");
+const modalImage = document.querySelector(".modal-dialog");
 
 const queryString = document.location.search;
 
@@ -18,8 +19,13 @@ async function getPosts() {
     const response = await fetch(url);
     const post = await response.json();
     console.log(post);
-    postImage.innerHTML = `<div class="post-image">
-    ${post.content.rendered}`;
+    postImage.innerHTML = `
+    ${post.content.rendered}
+`;
+    // postContainer.innerHTML = ``;
+    modalImage.innerHTML = `<figure class="post-image-modal">
+${post.content.rendered} </figure>
+`;
   } catch (error) {
     console.log(error);
   }

@@ -91,7 +91,54 @@ Blog Post
   min-width: 300px;
   margin: 0 auto;
 }
+/* =====
+Modal
+===== */
 
+.post-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 1.5em;
+  background: #00000070;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+  z-index: 20000;
+}
+
+.modal-dialog {
+  position: relative;
+  justify-content: top;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-dialog img {
+  width: 100%;
+}
+
+.modal-dialog > * {
+  padding: 1em;
+}
+
+.close-modal {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+.post-modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* additional */
 .care-info {
   grid-area: careinfo;
   text-align: center;
