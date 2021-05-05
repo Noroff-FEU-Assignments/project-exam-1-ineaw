@@ -1,13 +1,60 @@
 body {
   margin: 0 auto;
 }
+.nav li:nth-child(2) {
+  box-shadow: inset 0 -0.2em hsla(347, 56%, 28%, 0.738);
+}
+
+/* =====
+Breadcrumbs
+===== */
+.breadcrumbs {
+  list-style: none;
+  color: var(--accent);
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  position: relative;
+  padding-right: 1em;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.breadcrumbs li:after {
+  content: "/";
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  width: 1em;
+  text-align: center;
+}
+
+.breadcrumbs li:last-child {
+  font-weight: 600;
+}
+
+.breadcrumbs li:last-child::after {
+  content: "";
+}
+
+.breadcrumbs a {
+  display: inline-block;
+  color: var(--accent);
+  white-space: nowrap;
+  font-family: "roboto mono", Courier, monospace;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
 
 /* ======
 Blog Post
 ====== */
 
 .post {
-  padding: 2em 4em;
+  padding: 2em;
   display: grid;
   justify-content: center;
   gap: 2em;
@@ -34,9 +81,8 @@ Blog Post
 
 .post-image img {
   grid-area: postimage;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  border: 15px solid #ffffff;
 }
 
 .blog-text {
@@ -48,10 +94,22 @@ Blog Post
 
 .care-info {
   grid-area: careinfo;
+  text-align: center;
+}
+
+.care-info-header::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 3px;
+  margin-top: 10px;
+  background: var(--logo);
 }
 
 .sideposts {
   grid-area: sidebar;
+  background-color: var(--highlight);
+  padding: 15px;
 }
 
 /* ======
@@ -64,8 +122,8 @@ Media Queries
     grid-template-areas:
       "postimage postimage postimage sidebar"
       "blogtext blogtext blogtext sidebar"
-      "careinfo careinfo .... sidebar"
-      ".... .... .... sidebar";
+      "careinfo careinfo .... ...."
+      "careinfo careinfo .... ....";
   }
 }
 

@@ -1,0 +1,130 @@
+body {
+  margin: 0 auto;
+}
+.nav li:nth-child(3) {
+  box-shadow: inset 0 -0.2em hsla(347, 56%, 28%, 0.738);
+}
+
+/* =====
+  Breadcrumbs
+  ===== */
+.breadcrumbs {
+  list-style: none;
+  color: var(--accent);
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  position: relative;
+  padding-right: 1em;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.breadcrumbs li:after {
+  content: "/";
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  width: 1em;
+  text-align: center;
+}
+
+.breadcrumbs li:last-child {
+  font-weight: 600;
+}
+
+.breadcrumbs li:last-child::after {
+  content: "";
+}
+
+.breadcrumbs a {
+  display: inline-block;
+  color: var(--accent);
+  white-space: nowrap;
+  font-family: "roboto mono", Courier, monospace;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* ======
+  Blog Post
+  ====== */
+
+.about {
+  padding: 4em 4em;
+  display: grid;
+  justify-content: center;
+  gap: 2em;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "aboutimage"
+    "abouttext"
+    "sidebar";
+}
+
+.about-header {
+  margin: 30px;
+}
+
+.sideposts-header,
+.about-subheader,
+.sideposts-recent {
+  margin: 10px 0px 10px 0px;
+}
+
+/* Blog post content */
+
+.about-image img {
+  grid-area: aboutimage;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 15px solid #ffffff;
+}
+
+.about-text {
+  grid-area: abouttext;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.sideposts {
+  grid-area: sidebar;
+  background-color: var(--highlight);
+  padding: 2em;
+}
+
+.sideposts-recent::after,
+.newsletter::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: 20px;
+  background: var(--logo);
+}
+
+.sideposts-recent p,
+.newsletter-text {
+  font-size: 0.8em;
+}
+
+/* ======
+  Media Queries
+  ====== */
+
+@media (min-width: 800px) {
+  .about {
+    grid-template-columns: minmax(400px, 60%) minmax(1em, 1em) minmax(200px, 20%);
+    grid-template-areas:
+      "postimage postimage sidebar"
+      "blogtext blogtext ....";
+  }
+}
+
+@media (min-width: 600px) {
+}

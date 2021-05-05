@@ -25,10 +25,10 @@
         <nav class="nav">
           <button aria-label="Close navigation" class="close-nav">&times;</button>
           <ul class="nav-list">
-            <li class="nav-item"><a href="index.html" class="nav-link">home</a></li>
-            <li class="nav-item"><a href="blog.html" class="nav-link">blog</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">about</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">contact</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -36,8 +36,7 @@
     <main>
       <article class="post">
         <section class="post-container">
-          <figure class="post-image">
-            <img src="/images/Monstera.jpg" />
+          <div class="post-image">     </div>
             <figcaption class="blog-date">By Ine AW. Posted <time datetime="2021-04-21">April 21</time></figcaption>
           </figure>
           <div class="blog-text">
@@ -48,42 +47,53 @@
             <p><strong>Plant plant be Green</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
             <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
           </div>
+          </figure>
         </section>
         <section class="care-info">
-          <h3 class="care-info-header">Care</h3>
+          <h3 class="care-info-header">Care info</h3>
           <div aria-label="sunlight" class="sun">&#x1F31E;</div>
         </section>
         <aside class="sideposts">
           <h2 class="sideposts-header">Recent posts</h2>
           <div class="sideposts-recent">
+            <figure class="recent-image">
+              <img src="#" />
+              <figcaption class="aside-date">By Ine AW. Posted <time datetime="2021-04-21">April 21</time></figcaption>
+            </figure>
             <h4>How to care for Airplants</h4>
             <p>Plant plant be Green Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          </div>
+          <div class="sideposts-recent">
+            <figure class="recent-image">
+              <img src="#" />
+              <figcaption class="aside-date">By Ine AW. Posted <time datetime="2021-04-21">April 21</time></figcaption>
+            </figure>
+            <h4>How to care for Airplants</h4>
+            <p>Plant plant be Green Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
           </div>
         </aside>
       </article>
     </main>
-
     <footer class="footer">
-      <section>
-        <ul class="footer-main">
-          <li class="footer-link"><a href="#">Privacy Policy</a></li>
-          <li class="footer-link"><a href="#">Disclosures</a></li>
-          <li class="footer-link"><a href="#">Contact</a></li>
-          <li class="footer-link"><a href="#">About</a></li>
-        </ul>
-      </section>
-      <section>
-        <ul class="footer-social">
-          <li class="social-link">Facebook<a href="#"></a></li>
-          <li class="social-link">Pinterest<a href="#"></a></li>
-          <li class="social-link">Spotify<a href="#"></a></li>
-        </ul>
-      </section>
-      <p class="copyright">© Copyright 2021. All rights reserved. Website by Ine AW.</p>
+      <ul class="footer-main">
+        <li class="footer-link"><a href="#">Privacy Policy</a></li>
+        <li class="footer-link"><a href="#">Contact</a></li>
+        <li class="footer-link"><a href="#">About</a></li>
+      </ul>
+      <ul class="footer-social">
+        <li class="social-link"><a href="#">Facebook</a></li>
+        <li class="social-link"><a href="#">Pinterest</a></li>
+        <li class="social-link"><a href="#">Instagram</a></li>
+      </ul>
+      <ul class="footer-podcast">
+        <li class="social-link"><a href="#">Soundcloud</a></li>
+        <li class="social-link"><a href="#">Apple Music</a></li>
+        <li class="social-link"><a href="#">Spotify</a></li>
+      </ul>
     </footer>
+    <p class="copyright">© Copyright 2021. All rights reserved. Website by Ine AW.</p>
     <script src="js/post.js"></script>
     <script src="js/components/components.js"></script>
-    <script src="js/components/errors.js"></script>
+    <script src="js/components/error.js"></script>
   </body>
 </html>
