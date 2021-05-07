@@ -39,33 +39,23 @@
             <h2 class="hero-title">Level up your plant parenting</h2> 
             </header>
         </section>
-        <article class="carousel">
-          <section class="post-carousel">
-            <h2>Most popular</h2>
-            <figure class="carousel-card">
-                <figcaption class="carousel-card-text">
-                  <h3>Never too many</h3>
-                  <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-                </figcaption>
-                  <span class="carousel-details"> 
-                    <p class="blog-date">By Ine AW, Posted <time datetime="2021-04-21">April 21</time></p>
-              </span>
-          </figure>
+        <article class="popular-posts">
+          <h2>Recent posts</h2>
+        <section class="pop-post-wrap">
         </section>
-      </article>  
-        <article>
+        </article>
         <section class="news">      
-            <div class="news-topic">
-          <h2>Why are indoor plants the new craze?</h2>
-            </div>
-        <p class="news-text">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-          Aenean commodo ligula eget dolor. Aenean massa. 
-          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        </p>
-        <a class="btn news__btn" a href="blog.html">Read more</a>
-  </section>
-</article>
+          <div class="news-topic">
+        <h2>Plant Rescue</h2>
+          </div>
+      <p class="news-text">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+        Aenean commodo ligula eget dolor. Aenean massa. 
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </p>
+      <a class="btn news__btn" a href="blog.html">Read more</a>
+      </section>
+      
 <section class="quote">
   <blockquote class="plant-quote"><p>The grass is not greener on the other side. The grass is not greener on the other side</p></blockquote>
 </section>
@@ -83,23 +73,29 @@
     </div>
     </div>
 </section>
-<article class="popular-posts">
-  <h2>Recent posts</h2>
-<section class="pop-post-wrap">
-<figure class="pop-post-card1">
-  <img src="#">
-  <figcaption></figcaption>
-</figure>
-<figure class="pop-post-card2">
-  <img src="#">
-  <figcaption></figcaption>
-</figure>
-  <figure class="pop-post-card3">
-  <img src="#">
-  <figcaption></figcaption>
-  </figure>
+<article class="carousel-container">
+  <h2>Most popular</h2>
+  <section class="carousel">
+</section>
+<div class="btn-container">
+  <button id="prev-btn"><</button>
+  <button id="next-btn">></button>
+</div>
+</article>  
+<article>
+<section class="news">      
+    <div class="news-topic">
+  <h2>Why are indoor plants the new craze?</h2>
+    </div>
+<p class="news-text">
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+  Aenean commodo ligula eget dolor. Aenean massa. 
+  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
+<a class="btn news__btn" a href="blog.html">Read more</a>
 </section>
 </article>
+
       </main>
       <footer class="footer">
         <ul class="footer-main">
@@ -120,7 +116,9 @@
     </footer>
     <p class="copyright">© Copyright 2021. All rights reserved. Website by Ine AW.</p>
       <script src="js/index.js"></script>
-      <script src="js/components/components.js"></script>
+      <script src="js/carousel.js"></script>
+
+      <script src="js/components/navigation.js"></script>
       <script src="js/components/errors.js"></script>
   </body>
 </html>

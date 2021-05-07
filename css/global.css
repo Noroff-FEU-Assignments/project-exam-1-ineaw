@@ -5,9 +5,9 @@
   list-style: none;
   outline: none;
   text-decoration: none;
-  margin: 0 auto;
   font-family: "roboto", Helvetica, sans-serif;
   line-height: 1.6;
+  margin: 0 auto;
 }
 
 :root {
@@ -22,11 +22,12 @@
   --lila-accent: #e6dcec;
   --background-accent: #faf3d3;
 }
-
+html,
 body {
   background-color: var(--body);
   font-size: 1rem;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 /* =====
 typography
@@ -37,7 +38,7 @@ h1 {
   font-family: "DM serif display", Helvetica, sans-serif;
   font-weight: 800;
   text-align: center;
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 60px;
   color: var(--logo);
 }
@@ -85,7 +86,7 @@ Main Navigation
 
 .nav-item:hover {
   box-shadow: inset 0 -0.2em hsla(347, 56%, 28%, 0.738);
-  transition: transform 5000ms ease-in;
+  transition: 250ms ease-in;
 }
 .nav {
   background-color: var(--body);
@@ -96,8 +97,8 @@ Main Navigation
   bottom: 0;
   left: 100%;
   transform: translateX(0);
-  transition: transform 250ms ease-in;
-  z-index: 9999;
+  transition: 400ms ease-in-out;
+  z-index: 3;
 }
 
 .navigation-open {
@@ -174,6 +175,7 @@ Footer
 .social-link a:hover,
 .social-link a:focus {
   box-shadow: inset 0 -0.2em hsla(138, 81%, 67%, 0.322);
+  transition: 250ms ease-in-out;
 }
 
 .copyright {

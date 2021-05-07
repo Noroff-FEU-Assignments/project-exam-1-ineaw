@@ -14,27 +14,27 @@ Blog posts
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 3em;
+  padding: 4em;
 }
 .blog-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   margin-bottom: 30px;
 }
 
 .blog-post-card {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
   padding: 0.5em 0.5em 1em 0.5em;
   background: #ffffff;
   border-radius: 4px;
 }
 
 .blog-post-card img {
+  height: auto;
   max-width: 100%;
-
   transition: 0.3s all ease-in-out;
 }
 
@@ -43,7 +43,7 @@ Blog posts
 }
 
 .blog-post-card h3 {
-  font-family: "DM serif display";
+  font-family: "DM serif display", serif;
   font-size: 2rem;
   color: var(--logo);
 }
@@ -51,7 +51,6 @@ Blog posts
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* padding: 0.5em 1em 0em 1em; */
   font-size: 0.9em;
   max-width: 90%;
   margin: 0 auto;
@@ -82,5 +81,13 @@ Blog posts
 Media Queries
 ====== */
 
+@media (min-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 @media (min-width: 800px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

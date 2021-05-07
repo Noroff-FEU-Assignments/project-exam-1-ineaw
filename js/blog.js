@@ -1,32 +1,45 @@
-const url = "https://ineaw.no/the-green-side/wp-json/wp/v2/posts?_embed";
+const url = "https://ineaw.no/the-green-side/wp-json/wp/v2/posts/";
+const postContainer = document.querySelector(".blog-grid");
+const loadMore = document.querySelector("#more");
 
-const productContainer = document.querySelector(".blog-grid");
+let length = 6;
+let offset = 0;
 
 async function getPosts() {
   try {
-    const response = await fetch(url);
-    const getPosts = await response.json();
+    const response = await fetch(url + `?per_page=${length}&offset=${offset}&_embed`);
+    const post = await response.json();
     console.log(getPosts);
-    for (let i = 0; i < getPosts.length; i++) {
-      const img = getPosts[i].content.rendered;
-      const blogPost = getPosts[i].id;
-      const title = getPosts[i].title.rendered;
-      const postdate = getPosts[i].date;
-
-      productContainer.innerHTML += `
+    for (let i = 0; i < post.length; i++) {
+      const img = post[i].content.rendered;
+      const blogPost = post[i].id;
+      const title = post[i].title.rendered;
+      const postdate = post[i].date;
+      postContainer.innerHTML += `
       <figure class="blog-post-card">
-  <img class="image"> ${img}</img>
-   <h3> ${title} </h3>
+      <a href="post.html?id=${blogPost}">${img}</a> 
+      <h3>${title}</h3>
    <div class="blog-card-text">
      <p class="blog-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
      <a href="post.html?id=${blogPost}" class="blog-link">See more</a> 
+     <p class="blog-date">By Ine AW, Posted <time>${postdate}</time></p>
    </div>
-   <p class="blog-date">By Ine AW, Posted <time>${postdate}</time></p>
       </figure> `;
+
+      if (offset === 0) {
+        loadMore.style.display = "block";
+      } else {
+        loadMore.style.display = "none";
+      }
     }
   } catch (error) {
     console.log(error);
   }
 }
 
-getPosts();
+loadMore.addEventListener("click", () => {
+  offset += 6;
+  getPosts(url);
+});
+
+getPosts(url);

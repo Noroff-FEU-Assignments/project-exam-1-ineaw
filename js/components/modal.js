@@ -9,9 +9,9 @@ for (const el of openImage) {
   });
 }
 
-for (let el of closeImage) {
+for (const el of closeImage) {
   el.addEventListener("click", function () {
-    this.parentElement.parentElement.classList.remove(visible);
+    this.parentElement.parentElement.parentElement.classList.remove(isVisible);
   });
 }
 

@@ -1,3 +1,4 @@
+html,
 body {
   margin: 0 auto;
 }
@@ -64,19 +65,25 @@ Hero
   font-size: 3rem;
   line-height: 55px;
   max-width: 800px;
-  color: var(--main);
+  color: var(--accent);
 }
 
 /* =====
   Featured Posts Carousel
   ===== */
 
-.post-carousel {
+.carousel {
   max-width: 500px;
   position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-.carousel-card {
+.carousel-card,
+.pop-post-card {
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -85,12 +92,15 @@ Hero
   border-radius: 4px;
 }
 
-.carousel .carousel-card img {
+.carousel-card img,
+.pop-post-card img {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
-.carousel-card:hover {
+.carousel-card:hover,
+.pop-post-card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
@@ -99,7 +109,7 @@ Hero
   flex-direction: column;
   padding: 0.5em 1em 0em 1em;
 }
-.carousel-card-text h3 {
+.carousel-title {
   color: var(--accent);
   font-family: "roboto mono", Courier, monospace, sans-serif;
   font-weight: 400;
@@ -117,7 +127,7 @@ Recent posts & Newsletter
 
 .news,
 .latest-posts,
-.post-carousel,
+.carousel,
 .popular-posts,
 .newsletter {
   padding: 3em;
@@ -186,9 +196,9 @@ Recent posts & Newsletter
 /* Popular categories */
 
 .pop-post-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 1em;
 }
 
 .pop-post-wrap img {
@@ -214,5 +224,10 @@ Footer
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+  }
+
+  .pop-post-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
