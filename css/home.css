@@ -11,9 +11,9 @@ body {
   align-items: center;
   margin-bottom: 10px;
 }
-.nav li:first-child {
+/* .nav li:first-child {
   box-shadow: inset 0 -0.2em hsla(347, 56%, 28%, 0.738);
-}
+} */
 
 /* =====
 typography
@@ -21,15 +21,6 @@ typography
 
 .carousel h2 {
   color: var(--accent);
-}
-
-.btn {
-  display: inline-block;
-  background-color: transparent;
-  font-family: "roboto mono", Courier, monospace, sans-serif;
-  padding: 0.5em;
-  border: 2px solid;
-  color: var(--main);
 }
 
 /* =====
@@ -44,11 +35,12 @@ Hero
 
 .hero {
   background-color: var(--lila-accent);
+  background-image: url(/images/succulent-side.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   max-width: 100%;
-  height: 200px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -64,18 +56,20 @@ Hero
   font-weight: 800;
   font-size: 3rem;
   line-height: 55px;
-  max-width: 800px;
+  max-width: 600px;
   color: var(--accent);
 }
 
 /* =====
   Featured Posts Carousel
   ===== */
-
+.carousel-container {
+  margin-top: 30px;
+}
 .carousel {
-  max-width: 500px;
   position: relative;
   display: flex;
+  flex-direction: row;
   align-items: center;
   padding: 0;
   margin: 0 auto;
@@ -83,27 +77,31 @@ Hero
 }
 
 .carousel-card,
+.carousel-card-visible,
 .pop-post-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  max-width: 400px;
   margin: 10px;
   padding: 0.5em 0.5em 2em 0.5em;
-  background: #ffffff;
+  background: var(--body2);
   border-radius: 4px;
 }
 
+.carousel-card-visible img,
 .carousel-card img,
 .pop-post-card img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
 }
-
+.carousel-card-visible:hover,
 .carousel-card:hover,
 .pop-post-card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-
+.carousel-card-visible,
 .carousel-card-text {
   display: flex;
   flex-direction: column;
@@ -111,7 +109,7 @@ Hero
 }
 .carousel-title {
   color: var(--accent);
-  font-family: "roboto mono", Courier, monospace, sans-serif;
+  font-family: "DM serif display", Helvetica, sans-serif;
   font-weight: 400;
 }
 
@@ -137,31 +135,25 @@ Recent posts & Newsletter
 }
 
 /* headline news section */
-.info {
-  display: flex;
-  flex-direction: column;
-}
 .news {
   color: var(--accent);
   width: 100%;
-
   background-color: var(--lila-accent);
 }
+
 .news-text {
-  max-width: 70%;
   font-size: 1rem;
-  font-family: "roboto", Courier, monospace, sans-serif;
-  max-width: 500px;
-  margin-bottom: 10px;
+  max-width: 600px;
 }
 
 .news .btn {
   color: var(--accent);
+  align-self: center;
 }
 
 /* Newsletter */
 .newsletter {
-  background-color: var(--highlight);
+  background-color: var(--highlight2);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -183,11 +175,19 @@ Recent posts & Newsletter
   max-width: 500px;
 }
 .newsletter input {
-  padding: 0.2em;
+  padding: 1em;
   border: none;
   background-color: var(--highlight);
   margin-right: 10px;
   box-shadow: inset 0 -0.2em hsl(102, 64%, 16%);
+}
+
+.newsletter input::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--logo);
 }
 
 .newsletter input:focus {
@@ -196,14 +196,34 @@ Recent posts & Newsletter
 /* Popular categories */
 
 .pop-post-wrap {
+  margin-top: 30px;
   display: grid;
   grid-template-rows: 1fr;
   gap: 1em;
 }
 
+.pop-post-card p {
+  max-height: calc(var(--lh) * 3);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px 10px 20px 10px;
+  color: var(--accent);
+}
+
+.carousel-card p,
+.carousel-card h2,
+.carousel-card h3,
+.carousel-card h4,
+.pop-post-card p,
+.pop-post-card h2,
+.pop-post-card h3,
+.pop-post-card h4 {
+  display: none;
+}
+
 .pop-post-wrap img {
-  width: 100%;
-  height: 340px;
+  max-width: 100%;
+  height: auto;
 }
 
 /* =====
@@ -212,7 +232,13 @@ Footer
 
 /* Desktop Screens */
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
+  .pop-post-wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
   .hero-card {
     padding: 2em;
   }
@@ -228,6 +254,6 @@ Footer
 
   .pop-post-wrap {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }

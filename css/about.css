@@ -1,10 +1,10 @@
 body {
   margin: 0 auto;
 }
-.nav li:nth-child(3) {
+/* .nav li:nth-child(3) {
   box-shadow: inset 0 -0.2em hsla(347, 56%, 28%, 0.738);
 }
-
+ */
 /* =====
   Breadcrumbs
   ===== */
@@ -88,7 +88,7 @@ body {
 .about-text {
   grid-area: abouttext;
   max-width: 600px;
-  min-width: 300px;
+  min-width: 200px;
   margin: 0 auto;
 }
 

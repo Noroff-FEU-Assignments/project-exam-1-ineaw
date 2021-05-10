@@ -1,45 +1,72 @@
 const url = "https://ineaw.no/the-green-side/wp-json/wp/v2/posts/";
 const postContainer = document.querySelector(".blog-grid");
-const loadMore = document.querySelector("#more");
-
-let length = 6;
-let offset = 0;
+const load = document.querySelector("#more");
 
 async function getPosts() {
   try {
-    const response = await fetch(url + `?per_page=${length}&offset=${offset}&_embed`);
-    const post = await response.json();
-    console.log(getPosts);
-    for (let i = 0; i < post.length; i++) {
-      const img = post[i].content.rendered;
-      const blogPost = post[i].id;
-      const title = post[i].title.rendered;
-      const postdate = post[i].date;
-      postContainer.innerHTML += `
-      <figure class="blog-post-card">
-      <a href="post.html?id=${blogPost}">${img}</a> 
-      <h3>${title}</h3>
-   <div class="blog-card-text">
-     <p class="blog-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-     <a href="post.html?id=${blogPost}" class="blog-link">See more</a> 
-     <p class="blog-date">By Ine AW, Posted <time>${postdate}</time></p>
-   </div>
-      </figure> `;
-
-      if (offset === 0) {
-        loadMore.style.display = "block";
-      } else {
-        loadMore.style.display = "none";
-      }
-    }
+    const response = await fetch(url + `?per_page=12` + `&_embed`);
+    const result = await response.json();
+    console.log(result);
+    createHTML(result);
   } catch (error) {
     console.log(error);
   }
 }
+getPosts();
 
-loadMore.addEventListener("click", () => {
-  offset += 6;
+function createHTML(result) {
+  for (let i = 0; i < 8; i++) {
+    const post = result[i]._embedded["wp:featuredmedia"]["0"].source_url;
+    const postcontent = result[i].title.rendered;
+
+    console.log(post);
+    const blogPost = result[i].id;
+    const postDate = new Date(result[i].date).toLocaleString("en-US", {
+      month: "long",
+      day: "2-digit",
+      year: "2-digit",
+    });
+    postContainer.innerHTML += `
+       <figure class="blog-post-card">
+   <a href="post.html?id=${blogPost}"> <img src="${post}"/></a>
+   <div class="blog-date">By Ine AW, Posted <time>${postDate}</time></div>
+<h2>${postcontent}</h2>
+      <a href="post.html?id=${blogPost}" class="blog-link">Read more</a>
+       </figure> `;
+  }
+}
+
+load.addEventListener("click", () => {
+  async function getPosts(url) {
+    try {
+      const response = await fetch(url + `?per_page=12` + `&_embed`);
+      const results = await response.json();
+      console.log(results);
+      for (let i = 8; i < results.length; i++) {
+        const post = results[i]._embedded["wp:featuredmedia"]["0"].source_url;
+        const postcontent = results[i].title.rendered;
+
+        console.log(post);
+        const blogPost = results[i].id;
+        const postDate = new Date(results[i].date).toLocaleString("en-US", {
+          month: "long",
+          day: "2-digit",
+          year: "2-digit",
+        });
+
+        postContainer.innerHTML += `
+        <figure class="blog-post-card">
+    <a href="post.html?id=${blogPost}"> <img src="${post}"/></a>
+    <div class="blog-date">By Ine AW, Posted <time>${postDate}</time></div>
+    <h2>${postcontent}</h2>
+
+       <a href="post.html?id=${blogPost}" class="blog-link">Read more</a>
+        </figure> `;
+        load.style.display = "none";
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
   getPosts(url);
 });
-
-getPosts(url);

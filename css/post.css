@@ -3,10 +3,19 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
 }
-.nav li:nth-child(2) {
+/* .nav li:nth-child(2) {
   box-shadow: inset 0 -0.2em hsla(347, 56%, 28%, 0.738);
+} */
+
+main {
+  background-color: var(--highlight);
 }
 
+h2,
+h3,
+p {
+  color: var(--logodark);
+}
 /* =====
 Breadcrumbs
 ===== */
@@ -54,7 +63,11 @@ Breadcrumbs
 /* ======
 Blog Post
 ====== */
-
+.blog-header h2 {
+  color: var(--logo);
+  line-height: 50px;
+  margin-bottom: 40px;
+}
 .post {
   padding: 2em;
   display: grid;
@@ -65,6 +78,7 @@ Blog Post
     "postimage"
     "blogtext"
     "careinfo"
+    "comment"
     "sidebar";
 }
 
@@ -81,18 +95,36 @@ Blog Post
 
 /* Blog post content */
 
+.post-image {
+  max-width: 500px;
+}
+
 .post-image img {
   grid-area: postimage;
   height: auto;
   max-width: 100%;
-  border: 15px solid #ffffff;
+  cursor: pointer;
 }
-
+.text-container {
+  margin-top: 40px;
+}
 .blog-text {
   grid-area: blogtext;
-  max-width: 700px;
+  max-width: 500px;
   min-width: 300px;
   margin: 0 auto;
+}
+
+.blog-text img {
+  display: none;
+}
+
+.blog-text h2 {
+  padding: 10px;
+}
+
+.blog-text p {
+  margin-bottom: 10px;
 }
 /* =====
 Modal
@@ -109,7 +141,6 @@ Modal
   align-items: center;
   padding: 2em;
   background: #00000070;
-  cursor: pointer;
   visibility: hidden;
   opacity: 0;
   transition: all 0.35s ease-in;
@@ -117,10 +148,11 @@ Modal
 }
 
 .modal-dialog {
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .post-image-modal img {
+  display: block;
   height: auto;
   max-width: 100%;
 }
@@ -136,19 +168,22 @@ Modal
   text-align: center;
 }
 
+.blog-header::after,
 .care-info-header::after {
   content: "";
   display: block;
-  width: 300px;
+  width: 100%;
   height: 3px;
-  margin-top: 10px;
+  margin: 20px 0px;
   background: var(--logo);
 }
 
 .sideposts {
   grid-area: sidebar;
-  background-color: var(--highlight);
+  /* border: 2px solid var(--body); */
+  background-color: var(--highlight2);
   padding: 15px;
+  color: var(--headers);
 }
 
 .recent-image img {
@@ -160,31 +195,27 @@ Comment field
 ====== */
 
 .comment-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 300px;
+  grid-area: comment;
 }
 
 .comment-section label {
   display: block;
   margin: 10px;
-  padding: 5px;
+  font-family: "DM serif display", Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+#comment-field input,
+.comment-section textarea {
+  border: none;
+  width: 100%;
+  padding: 1em;
+  margin-top: 10px;
 }
 
 .comment-section textarea {
-  border: none;
-  width: 200px;
-  margin-top: 2px;
-  padding: 5px;
   resize: none;
   height: 120px;
-}
-
-#comment-field input {
-  width: 200px;
-  margin-top: 2px;
-  padding: 5px;
 }
 
 /* ======
@@ -193,12 +224,15 @@ Media Queries
 
 @media (min-width: 800px) {
   .post {
-    grid-template-columns: minmax(400px, 60%) minmax(1em, 1em) minmax(1em, 1em) minmax(200px, 15%);
+    grid-template-columns:
+      minmax(300px, 60%)
+      minmax(1em, 1em)
+      minmax(200px, 25%);
     grid-template-areas:
-      "postimage postimage .... sidebar"
-      "blogtext blogtext blogtext sidebar"
-      "careinfo careinfo .... ...."
-      "careinfo careinfo .... ....";
+      "postimage postimage sidebar"
+      "blogtext blogtext  sidebar"
+      "careinfo careinfo ...."
+      "comment comment ....";
   }
   .post-image-modal {
     max-width: 90%;

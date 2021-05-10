@@ -6,41 +6,47 @@
   outline: none;
   text-decoration: none;
   font-family: "roboto", Helvetica, sans-serif;
-  line-height: 1.6;
   margin: 0 auto;
+  line-height: 1.7;
 }
 
 :root {
+  --lh: 1.7rem;
+
   --body: #ebddde;
+  --body2: #f1e8e9;
   --main: #fae8df;
   --headers: #325637;
   --accent: #483437;
   --highlight: #d1d9c5;
+  --highlight2: #dfe5d6;
   --logo: #22593d;
   --logodark: ##121f13;
-
   --lila-accent: #e6dcec;
   --background-accent: #faf3d3;
 }
 html,
 body {
-  background-color: var(--body);
+  background-color: var(--highlight2);
   font-size: 1rem;
   min-height: 100vh;
   scroll-behavior: smooth;
+}
+
+main {
+  background-color: var(--highlight);
 }
 /* =====
 typography
 ===== */
 h1 {
-  padding: 10px;
-  margin: 10px;
-  font-family: "DM serif display", Helvetica, sans-serif;
+  font-family: "DM serif display", serif;
   font-weight: 800;
   text-align: center;
-  font-size: 4rem;
+  font-size: 2rem;
   line-height: 60px;
   color: var(--logo);
+  padding: 0.2em;
 }
 
 h1:hover,
@@ -50,46 +56,61 @@ h1:focus {
 
 h2 {
   text-align: center;
+  font-size: 3rem;
+  color: var(--logo);
+}
+
+h3 {
   font-size: 2rem;
-  font-weight: 400;
-  font-family: "DM serif display", Helvetica, sans-serif;
-  line-height: 40px;
-  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "DM serif display", serif;
 }
 .btn {
-  display: inline-block;
   background-color: transparent;
-  font-family: "roboto mono", Courier, monospace, sans-serif;
-  padding: 0.5em;
-  border: 2px solid;
+  padding: 0.5em 1.5em;
+  max-width: 120px;
+  border: 2px solid var(--logo);
+  color: var(--logo);
   cursor: pointer;
+  margin: 10px;
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 /* ======
 Main Navigation
 ====== */
 
-.header-home {
+.header {
   width: 100%;
+  background-color: var(--highlight2);
 }
 
 .header-content {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
 }
 
-.nav__link,
 .nav-link {
   font-family: "DM serif display", Helvetica, sans-serif;
 }
 
 .nav-item:hover {
-  box-shadow: inset 0 -0.2em hsla(347, 56%, 28%, 0.738);
-  transition: 250ms ease-in;
+  text-decoration: 2px solid var(--accent) underline;
+  /* box-shadow: inset 0 -0.2em hsla(346, 30%, 29%, 0.486); */
+  /* transition: 550ms ease-in; */
 }
 .nav {
-  background-color: var(--body);
+  background-color: var(--highlight2);
   position: fixed;
   width: 100%;
   top: 0;
@@ -119,7 +140,7 @@ Main Navigation
 .nav-link {
   color: var(--accent);
   text-decoration: none;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .close-nav {
@@ -127,11 +148,11 @@ Main Navigation
   background: 0;
   color: var(--accent);
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
-  padding: 0.5em;
   position: absolute;
-  padding: 1em;
+  left: 0;
+  margin: 15px;
 }
 
 .open-nav {
@@ -141,7 +162,7 @@ Main Navigation
   cursor: pointer;
   padding: 0.5em;
   margin-left: auto;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 /* ======
@@ -160,14 +181,22 @@ Footer
   padding: 1em;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .footer-link a,
-.social-link a {
+.social-link a,
+.footer-social h3,
+.footer-podcast h3 {
   color: var(--highlight);
   font-family: "DM serif display", Helvetica, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.footer-social h3,
+.footer-podcast h3 {
+  text-decoration: underline;
 }
 
 .footer-link a:hover,
@@ -192,6 +221,9 @@ Media Queries
 /* Desktop */
 
 @media (min-width: 800px) {
+  main {
+    margin: 0px 100px;
+  }
   .open-nav,
   .close-nav {
     display: none;
@@ -204,11 +236,11 @@ Media Queries
 
   .nav-list {
     flex-direction: row;
-    margin-left: 1em;
+    margin-left: 10px;
   }
 
   .nav-link {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   .header-home .nav {

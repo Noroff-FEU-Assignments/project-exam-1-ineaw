@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Prata&display=swap" rel="stylesheet" />
     <link href="css/global.css" rel="stylesheet" />
-    <link href="css/blog.css" rel="stylesheet" />
+    <link href="css/contact.css" rel="stylesheet" />
    </head>
   <body>
     <header>
@@ -32,9 +32,82 @@
             </ul>
           </nav>
         </div>
-      
     </header>
-    <main></main>
+    <main>
+      <h2>Contact me</h2>
+      <section class="contact">
+                                <form id="contactForm">
+                              <div>
+                               <label for="fullName">
+                                   Name
+                                   <input name="fullName" placeholder="Enter name"  id="fullName"/>
+                               </label>
+                               <div class="form-error" id="fullNameError">Please enter a valid name</div>
+                           </div>
+                           <div>
+                           <label for="email">
+                               Email
+                               <input name="email" placeholder="Enter email address" id="email"/>
+                           </label>
+                           <div class="form-error" id="emailError">Please enter a valid email address</div>
+                       </div>
+                           <div>
+                               <label for="subject">
+                                   Subject
+                                   <input name="subject" placeholder="Minimum 25 characters" id="subject"></input>
+                               </label>
+                               <div class="form-error" id="subjectError">Please enter minimum 15 characters</div>
+                           </div>
+                           <div>
+                           <label for="contactMessage">
+                           Mesage
+                            <textarea name="contactMessage" placeholder="Minimum 25 characters" id="contactMessage"></textarea>
+                        </label>
+                        <div class="form-error" id="contactMessageError">Please enter minimum 25 characters</div>
+                    </div>
+                           <button class="btn submit-button">Send</button>
+                           <div class="message"></div>
+                       </form>
+              </section>
+              <aside class="sideposts">
+                <section>
+                <h2 class="sideposts-header">Recent posts</h2>
+                <div class="sideposts-recent">
+                  <figure class="recent-image">
+                    <figcaption class="aside-date">By Ine AW. Posted <time datetime="2021-04-21">April 21</time></figcaption>
+                  </figure>
+                  <h4>How to care for Airplants</h4>
+                  <p>Plant plant be Green Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                  <p>Aenean commodo ligula eget dolor. Aenean massa.</p>
+                </div>
+                <div class="sideposts-recent">
+                  <figure class="recent-image">
+                    <figcaption class="aside-date">By Ine AW. Posted <time datetime="2021-04-21">April 21</time></figcaption>
+                  </figure>
+                  <h4>How to care for Airplants</h4>
+                  <p>Plant plant be Green Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                  <p>Aenean commodo ligula eget dolor. Aenean massa.</p>
+                </div>
+              </section>
+              <section>
+                <div class="newsletter">
+                  <div class="newsletter-topic">
+                    <h4>Join the green side</h4>
+                  </div>
+                  <p class="newsletter-text">
+                    Sign up here
+                  </p>
+                  <div class="sign-up"> 
+                <input type="text" placeholder="Enter your e-mail address" id="signup-email" name="newsletter" aria-label="newsletter sign-up form">
+                    <button class="btn sign" role="button">Sign up</button>
+                    <div class="email-error"></div>
+                    </div>
+                    </div>
+                </div>
+              </section>
+              </aside>
+      
+    </main>
    <footer class="footer">
       <ul class="footer-main">
         <li class="footer-link"><a href="#">Privacy Policy</a></li>
@@ -52,7 +125,7 @@
         <li class="social-link"><a href="#">Spotify</a></li>
       </ul>
   </footer>
-  <p class="copyright">© Copyright 2021. All rights reserved. Website by Ine AW.</p>
+  <p class="copyright">© Copyright 2021. All rights reserved. Website by <strong> Ine AW.</strong></p>
 
   </body>
   <script src="js/contact.js"></script>
