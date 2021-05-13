@@ -5,7 +5,7 @@ const loader = document.querySelector(".loader");
 
 async function getPosts() {
   try {
-    const response = await fetch(url + `?per_page=12` + `&_embed`);
+    const response = await fetch(url + `?per_page=100` + `&_embed`);
     const result = await response.json();
     console.log(result);
     createHTML(result);

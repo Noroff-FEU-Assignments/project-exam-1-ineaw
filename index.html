@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>The Green Side Blog</title>
+    <html lang="en"></html>
     <meta name="description" content="Blog for plant nerds and newbies with information and facts about house plants, green plants, airplants and how to make them grow and to care for them" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="data:," />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/40834ce6db.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Prata&display=swap" rel="stylesheet" />
     <link href="css/global.css" rel="stylesheet" />
@@ -25,7 +23,9 @@
         <nav class="nav">
           <button aria-label="Close navigation" class="close-nav">&times;</button>
           <ul class="nav-list">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
             <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -39,8 +39,19 @@
           <h2 class="hero-title">Level up your plant parenting</h2>
         </header>
       </section>
+      <article>
+        <section class="news">
+          <div class="news-topic">
+            <!-- <h2>Wild about indoor plants?</h2> -->
+            <h2>A blog for plant newbies</h2>
+          </div>
+          <p class="news-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          <div class="btn news-btn" a href="#">Get your guide</div>
+        </section>
+      </article>
+
       <article class="popular-posts">
-        <h2>Recent posts</h2>
+        <!-- <h2>Recent stories</h2> -->
         <section class="pop-post-wrap">
           <div class="loader"></div>
         </section>
@@ -64,24 +75,14 @@
         </div>
       </section>
       <article class="carousel-container">
-        <h2>Most popular</h2>
-        <div class="carousel-wrap">
-          <section class="carousel">
+        <h2>Popular Stories</h2>
+        <section class="carousel-wrap">
+          <button id="prev-btn">&#10094;</button>
+
+          <div class="carousel">
             <div class="loader"></div>
-          </section>
-          <div class="carousel-nav">
-            <button id="prev-btn"><</button>
-            <button id="next-btn">></button>
           </div>
-        </div>
-      </article>
-      <article>
-        <section class="news">
-          <div class="news-topic">
-            <h2>Wild about indoor plants?</h2>
-          </div>
-          <p class="news-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          <div class="btn news-btn" a href="blog.html">Read more</div>
+          <button id="next-btn">&#10095;</button>
         </section>
       </article>
     </main>

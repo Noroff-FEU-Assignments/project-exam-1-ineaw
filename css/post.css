@@ -11,15 +11,9 @@ main {
   background-color: var(--highlight);
 }
 
-h2,
-h3,
-p {
-  color: var(--logodark);
-}
 /* =====
 Breadcrumbs
 ===== */
-
 /* ======
 Blog Post
 ====== */
@@ -141,42 +135,6 @@ Modal
   background: var(--logo);
 }
 
-.sideposts {
-  grid-area: sidebar;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--lila-accent);
-  padding: 2em;
-  border-radius: 4px;
-  max-width: 250px;
-}
-.sideposts h4 {
-  margin: 10px 0px;
-}
-.sideposts input {
-  border: none;
-  max-width: 150px;
-  padding: 0.2em;
-  font-size: 0.8rem;
-}
-
-.sideposts-recent::after,
-.newsletter::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  margin-top: 20px;
-  background: var(--logo);
-}
-
-.aside-date,
-.sideposts .btn,
-.sideposts-recent p,
-.newsletter-text {
-  font-size: 0.8em;
-}
-
 /* ======
 Comment field
 ====== */
@@ -223,7 +181,6 @@ Media Queries
       "careinfo careinfo ...."
       "comment comment ....";
   }
-
   .post-modal {
     padding: 2em;
   }

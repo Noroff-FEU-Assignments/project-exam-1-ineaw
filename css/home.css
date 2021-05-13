@@ -71,53 +71,51 @@ Hero
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  position: relative;
+  margin: 0;
 }
-.carousel {
+/* .carousel {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0;
   margin: 0 auto;
-  overflow: hidden;
+} */
+
+.carousel-wrap button {
+  border: none;
+  background-color: transparent;
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--logo);
 }
+
 #next-btn {
-  border: none;
-  position: absolute;
-  background-color: transparent;
-  border-radius: 4px;
-  text-align: center;
-  padding: 0.5em;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--logo);
-  right: 0;
-  z-index: 9999;
+  margin-right: 5px;
 }
-
 #prev-btn {
-  border: none;
-  position: absolute;
-  background-color: transparent;
-  border-radius: 4px;
-  text-align: center;
-  padding: 0.5em;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--logo);
-  z-index: 9999;
+  margin-left: 5px;
 }
-
 .carousel-card,
 .pop-post-card {
-  display: flex;
+  display: block;
   flex-direction: column;
   max-width: 500px;
-  margin: 10px;
   padding: 0.5em 0.5em 2em 0.5em;
   background: var(--body2);
   border-radius: 4px;
+  animation: fadeVisibility 1s;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .carousel-card img,
@@ -134,11 +132,16 @@ Hero
   display: flex;
   flex-direction: column;
   padding: 0.5em 1em 0em 1em;
+  display: none;
 }
 .carousel-title {
   color: var(--headers);
   font-family: "DM serif display", Helvetica, sans-serif;
   font-weight: 400;
+}
+
+.carousel-card p {
+  display: none;
 }
 
 /* .carousel-card p {
@@ -235,7 +238,7 @@ Recent posts & Newsletter
 }
 .newsletter input {
   font-size: 1rem;
-  padding: 1em;
+  padding: 0.5em;
   width: 220px;
   border: none;
   background-color: var(--highlight2);
@@ -245,7 +248,6 @@ Recent posts & Newsletter
 
 .newsletter input:focus {
   background-color: #ffffff;
-  text-decoration: underline;
 }
 /* Popular categories */
 
@@ -293,6 +295,16 @@ Footer
   .sign-up {
     flex-direction: row;
     align-items: center;
+  }
+  .carousel-wrap button {
+    font-size: 4rem;
+    position: absolute;
+  }
+  #next-btn {
+    margin-right: -600px;
+  }
+  #prev-btn {
+    margin-left: -600px;
   }
 }
 

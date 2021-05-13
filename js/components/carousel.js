@@ -1,5 +1,5 @@
-next = document.querySelector("#next-btn");
-previous = document.querySelector("#prev-btn");
+const next = document.querySelector("#next-btn");
+const previous = document.querySelector("#prev-btn");
 
 function prevPage() {
   if (page === 1) {

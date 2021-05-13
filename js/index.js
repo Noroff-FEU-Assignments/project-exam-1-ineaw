@@ -11,6 +11,7 @@ async function getPosts() {
     const response = await fetch(url + `?per_page=6&_embed`);
     const posts = await response.json();
     recentPosts.innerHTML = "";
+
     for (let i = 0; i < posts.length; i++) {
       const img = posts[i]._embedded["wp:featuredmedia"]["0"].source_url;
       const post = posts[i].id;

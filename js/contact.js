@@ -41,7 +41,6 @@ function validateForm(e) {
 
   if (isValidated) {
     alertMessage.innerHTML = `<div class="success-message">Your message has been sent</div>`;
-    form.reset();
   }
 }
 
