@@ -1,40 +1,71 @@
-const url = "https://ineaw.no/the-green-side/wp-json/wp/v2/posts?per_page=8&_embed";
+let url = "https://ineaw.no/the-green-side/wp-json/wp/v2/posts";
 
-const carouselContainer = document.querySelector(".carousel");
 const recentPosts = document.querySelector(".pop-post-wrap");
+const aside = document.querySelector(".sideposts");
+const carouselContainer = document.querySelector(".carousel");
+
+let page = 1;
 
 async function getPosts() {
   try {
-    const response = await fetch(url);
-    const getPosts = await response.json();
-    console.log(getPosts);
-    carouselContainer.innerHTML = "";
-    for (let i = 0; i < getPosts.length; i++) {
-      const img = getPosts[i].content.rendered;
-      const post = getPosts[i].id;
-      const postDate = getPosts[i].date;
-      const title = getPosts[i].title.rendered;
-      carouselContainer.innerHTML += `
-      <figure class="carousel-card">
-      <a href="post.html?id=${post}"> ${img} 
-      <p class="blog-date">By Ine AW, Posted <time>${postDate}</time></p>
-
-   <h3 class="carousel-title"> ${title} </h3>
-   </a>
-   <div class="blog-card-text">
-     <p class="blog-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-     <a href="post.html?id=${post}" class="blog-link">See more</a> 
-   </div>
-      </figure> `;
-      recentPosts.innerHTML += `<figure class="pop-post-card ">
-      ${img} 
-      <figcaption></figcaption>
-    </figure>
-    `;
+    const response = await fetch(url + `?per_page=6&_embed`);
+    const posts = await response.json();
+    recentPosts.innerHTML = "";
+    for (let i = 0; i < posts.length; i++) {
+      const img = posts[i]._embedded["wp:featuredmedia"]["0"].source_url;
+      const post = posts[i].id;
+      const postContent = posts[i].excerpt.rendered;
+      const title = posts[i].title.rendered;
+      const postDate = new Date(posts[i].date).toLocaleString("en-US", {
+        month: "long",
+        day: "2-digit",
+      });
+      recentPosts.innerHTML += `
+<figure class="carousel-card">
+    <a href="post.html?id=${post}"> <img src="${img}"/> </a>
+ <p class="blog-date">By Ine AW, Posted <time>${postDate}</time></p>
+ <h3 class="carousel-title">${title}</h3>
+<p>${postContent}</p>
+ <a href="post.html?id=${post}" class="blog-link">Read more</a>
+</figure`;
     }
   } catch (error) {
     console.log(error);
+    postContainer.innerHTML = message("An error occured when trying to load", error);
   }
 }
-
 getPosts();
+
+async function getCarouselPosts() {
+  try {
+    let response = await fetch(url + `?page=${page}` + `&per_page=1` + `&_embed`);
+    let posts = await response.json();
+    carouselContainer.innerHTML = "";
+
+    let i = 0;
+
+    for (i; i < posts.length; i++) {
+      const img = posts[i]._embedded["wp:featuredmedia"]["0"].source_url;
+      const post = posts[i].id;
+      const postContent = posts[i].excerpt.rendered;
+      const title = posts[i].title.rendered;
+      const postDate = new Date(posts[i].date).toLocaleString("en-US", {
+        month: "long",
+        day: "2-digit",
+      });
+      carouselContainer.innerHTML += `
+          <figure class="carousel-card">
+              <a href="post.html?id=${post}"> <img src="${img}"/> </a>
+           <p class="blog-date">By Ine AW, Posted <time>${postDate}</time></p>
+           <h3 class="carousel-title">${title}</h3>
+        <p>${postContent}</p>
+           <a href="post.html?id=${post}" class="blog-link">Read more</a>
+           
+</figure`;
+    }
+  } catch (error) {
+    console.log(error);
+    postContainer.innerHTML = message("An error occured when trying to load", error);
+  }
+}
+getCarouselPosts();

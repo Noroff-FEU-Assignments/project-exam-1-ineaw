@@ -1,3 +1,7 @@
+h2 {
+  color: var(--logo);
+}
+
 .contact {
   background-color: var(--highlight);
   padding: 2em;
@@ -8,7 +12,7 @@
 #contactForm label {
   display: block;
   margin: 5px 20px;
-  color: var(--accent);
+  color: var(--logo);
   text-align: left;
 }
 #contactForm input,
@@ -25,7 +29,7 @@
 }
 
 .submit-button {
-  color: var(--accent);
+  color: var(--logo);
   margin: 20px;
 }
 

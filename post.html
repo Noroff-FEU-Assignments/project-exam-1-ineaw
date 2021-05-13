@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Post : The Green Side Blog</title>
+    <title>Post ß| The Green Side Blog</title>
     <meta name="description" content="Find out everything you need to know about one specific plant or plant family " />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,6 +45,11 @@
       </div>
     </header>
     <main>
+      <ul class="breadcrumbs">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#">Post</a></li>
+      </ul>
       <div tabindex=0 class="post-modal" id="post-modal">
         <div class="modal-dialog">
           <div role="dialog" aria-label="featured image enlarged"></div>
@@ -60,7 +65,6 @@
         <figure class="post-image">
 <div class="loader"></div>
 </figure>
-</figure>
       </div>
           </figure>
           <div class="text-container">
@@ -74,22 +78,44 @@
           <div aria-label="sunlight" class="sun">&#x1F31E;</div>
         </section>
         <aside class="sideposts">
-          <h2 class="sideposts-header">Recent posts</h2>
+          <section>
+          <h3 class="sideposts-header">Recent posts</h3>
           <div class="sideposts-recent">
             <figure class="recent-image">
               <figcaption class="aside-date">By Ine AW. Posted <time datetime="2021-04-21">April 21</time></figcaption>
             </figure>
             <h4>How to care for Airplants</h4>
             <p>Plant plant be Green Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>Aenean commodo ligula eget dolor. Aenean massa.</p>
           </div>
           <div class="sideposts-recent">
             <figure class="recent-image">
-              <img src="#" />
               <figcaption class="aside-date">By Ine AW. Posted <time datetime="2021-04-21">April 21</time></figcaption>
             </figure>
             <h4>How to care for Airplants</h4>
             <p>Plant plant be Green Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>Aenean commodo ligula eget dolor. Aenean massa.</p>
           </div>
+        </section>
+        <section class="newsletter">
+            <div class="newsletter-topic">
+              <h4>Join the green side</h4>
+            </div>
+            <p class="newsletter-text">
+              Sign up here
+            </p>
+            <div class="sign-up"> 
+          <input type="text" placeholder="Enter your e-mail address" id="signup-email" name="newsletter" aria-label="newsletter sign-up form">
+              <button class="btn sign" role="button">Sign up</button>
+              <div class="email-error"></div>
+              </div>
+          </div>
+        </section>
+        <section class="side-about">
+          <h4>About this blog</h4>
+          <p>Plant plant be Green Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+          <p>Aenean commodo ligula eget dolor. Aenean massa.</p>
+        </section>
         </aside>
       <section class="comment-section">
 <form id="comment-field">
@@ -105,19 +131,22 @@
     </main>
     <footer class="footer">
       <ul class="footer-main">
+        <li class="footer-link"><a href="about.html">About</a></li>
+        <li class="footer-link"><a href="contact.html">Contact</a></li>
+        <li class="footer-link"><a href="#">Disclosure</a></li>
         <li class="footer-link"><a href="#">Privacy Policy</a></li>
-        <li class="footer-link"><a href="#">Contact</a></li>
-        <li class="footer-link"><a href="#">About</a></li>
       </ul>
       <ul class="footer-social">
+        <h3>Follow</h3>
         <li class="social-link"><a href="#">Facebook</a></li>
         <li class="social-link"><a href="#">Pinterest</a></li>
         <li class="social-link"><a href="#">Instagram</a></li>
       </ul>
       <ul class="footer-podcast">
-        <li class="social-link"><a href="#">Soundcloud</a></li>
-        <li class="social-link"><a href="#">Apple Music</a></li>
+        <h3>Listen</h3>
         <li class="social-link"><a href="#">Spotify</a></li>
+        <li class="social-link"><a href="#">Apple Music</a></li>
+        <li class="social-link"><a href="#">Soundcloud</a></li>
       </ul>
     </footer>
     <p class="copyright">© Copyright 2021. All rights reserved. Website by <strong> Ine AW.</strong></p>

@@ -1,12 +1,23 @@
-async function getRecentPosts() {
-  try {
-    const response = await fetch(url);
-    const result = await response.json();
-    console.log(result);
-    createRecentPosts(result);
-  } catch (error) {
-    console.log(error);
+next = document.querySelector("#next-btn");
+previous = document.querySelector("#prev-btn");
+
+function prevPage() {
+  if (page === 1) {
+    page = 6;
+  } else {
+    page--;
   }
+  getCarouselPosts();
 }
 
-getRecentPosts();
+function nextPage() {
+  if (page === 5) {
+    page = 1;
+  } else {
+    page++;
+  }
+  getCarouselPosts();
+}
+
+previous.addEventListener("click", prevPage);
+next.addEventListener("click", nextPage);

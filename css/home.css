@@ -66,59 +66,105 @@ Hero
 .carousel-container {
   margin-top: 30px;
 }
-.carousel {
-  position: relative;
+
+.carousel-wrap {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
+}
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0 auto;
   overflow: hidden;
 }
+#next-btn {
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--logo);
+  right: 0;
+  z-index: 9999;
+}
+
+#prev-btn {
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--logo);
+  z-index: 9999;
+}
 
 .carousel-card,
-.carousel-card-visible,
 .pop-post-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 400px;
+  max-width: 500px;
   margin: 10px;
   padding: 0.5em 0.5em 2em 0.5em;
   background: var(--body2);
   border-radius: 4px;
 }
 
-.carousel-card-visible img,
 .carousel-card img,
 .pop-post-card img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
 }
-.carousel-card-visible:hover,
 .carousel-card:hover,
 .pop-post-card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-.carousel-card-visible,
 .carousel-card-text {
   display: flex;
   flex-direction: column;
   padding: 0.5em 1em 0em 1em;
 }
 .carousel-title {
-  color: var(--accent);
+  color: var(--headers);
   font-family: "DM serif display", Helvetica, sans-serif;
   font-weight: 400;
 }
 
-.carousel-details {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
+/* .carousel-card p {
+  max-height: calc(var(--lh) * 2);
+  overflow: hidden;
+  margin: 5px 20px 0px 20px;
+  color: var(--text);
 }
 
+.carousel-card h4 {
+  display: none;
+}
+.carousel-card p:nth-child(5) {
+  display: none;
+}
+.carousel-card p:nth-child(6) {
+  display: none;
+}
+.carousel-card p:nth-child(8) {
+  display: none;
+} */
+
+.blog-date {
+  font-size: 0.8em;
+  margin-left: 0;
+}
 /* =====
 Recent posts & Newsletter
 ==== */
@@ -147,8 +193,14 @@ Recent posts & Newsletter
 }
 
 .news .btn {
+  border: 2px solid var(--accent);
   color: var(--accent);
   align-self: center;
+}
+
+.news .btn:hover {
+  color: var(--lila-accent);
+  background-color: var(--accent);
 }
 
 /* Newsletter */
@@ -167,31 +219,33 @@ Recent posts & Newsletter
   margin-bottom: 10px;
 }
 
-.newsletter .btn {
-  color: var(--headers);
+.newsletter .btn:hover,
+.newsletter .btn:focus {
+  color: var(--highlight);
 }
 .newsletter p {
   font-size: 1rem;
   max-width: 500px;
 }
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .newsletter input {
+  font-size: 1rem;
   padding: 1em;
+  width: 220px;
   border: none;
-  background-color: var(--highlight);
+  background-color: var(--highlight2);
   margin-right: 10px;
   box-shadow: inset 0 -0.2em hsl(102, 64%, 16%);
 }
 
-.newsletter input::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: var(--logo);
-}
-
 .newsletter input:focus {
   background-color: #ffffff;
+  text-decoration: underline;
 }
 /* Popular categories */
 
@@ -210,7 +264,7 @@ Recent posts & Newsletter
   color: var(--accent);
 }
 
-.carousel-card p,
+/* .carousel-card p,
 .carousel-card h2,
 .carousel-card h3,
 .carousel-card h4,
@@ -219,7 +273,7 @@ Recent posts & Newsletter
 .pop-post-card h3,
 .pop-post-card h4 {
   display: none;
-}
+} */
 
 .pop-post-wrap img {
   max-width: 100%;
@@ -232,9 +286,13 @@ Footer
 
 /* Desktop Screens */
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 801px) {
   .pop-post-wrap {
     grid-template-columns: 1fr 1fr;
+  }
+  .sign-up {
+    flex-direction: row;
+    align-items: center;
   }
 }
 

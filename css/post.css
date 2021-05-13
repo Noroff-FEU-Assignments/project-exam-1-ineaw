@@ -19,46 +19,6 @@ p {
 /* =====
 Breadcrumbs
 ===== */
-.breadcrumbs {
-  list-style: none;
-  color: var(--accent);
-}
-
-.breadcrumbs li {
-  display: inline-block;
-  position: relative;
-  padding-right: 1em;
-  margin: 0;
-  font-size: 0.8em;
-}
-
-.breadcrumbs li:after {
-  content: "/";
-  position: absolute;
-  display: inline-block;
-  right: 0;
-  width: 1em;
-  text-align: center;
-}
-
-.breadcrumbs li:last-child {
-  font-weight: 600;
-}
-
-.breadcrumbs li:last-child::after {
-  content: "";
-}
-
-.breadcrumbs a {
-  display: inline-block;
-  color: var(--accent);
-  white-space: nowrap;
-  font-family: "roboto mono", Courier, monospace;
-}
-
-.breadcrumbs a:hover {
-  text-decoration: underline;
-}
 
 /* ======
 Blog Post
@@ -125,6 +85,10 @@ Blog Post
 
 .blog-text p {
   margin-bottom: 10px;
+  color: var(--text);
+}
+.blog-date {
+  color: var(--accent);
 }
 /* =====
 Modal
@@ -139,7 +103,6 @@ Modal
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em;
   background: #00000070;
   visibility: hidden;
   opacity: 0;
@@ -174,20 +137,44 @@ Modal
   display: block;
   width: 100%;
   height: 3px;
-  margin: 20px 0px;
+  margin: 0px 0px 20px 0px;
   background: var(--logo);
 }
 
 .sideposts {
   grid-area: sidebar;
-  /* border: 2px solid var(--body); */
-  background-color: var(--highlight2);
-  padding: 15px;
-  color: var(--headers);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lila-accent);
+  padding: 2em;
+  border-radius: 4px;
+  max-width: 250px;
+}
+.sideposts h4 {
+  margin: 10px 0px;
+}
+.sideposts input {
+  border: none;
+  max-width: 150px;
+  padding: 0.2em;
+  font-size: 0.8rem;
 }
 
-.recent-image img {
-  max-width: 200px;
+.sideposts-recent::after,
+.newsletter::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: 20px;
+  background: var(--logo);
+}
+
+.aside-date,
+.sideposts .btn,
+.sideposts-recent p,
+.newsletter-text {
+  font-size: 0.8em;
 }
 
 /* ======
@@ -203,11 +190,12 @@ Comment field
   margin: 10px;
   font-family: "DM serif display", Helvetica, sans-serif;
   font-size: 1.5rem;
+  color: var(--logodark);
 }
 
 #comment-field input,
 .comment-section textarea {
-  border: none;
+  border: 2px solid var(--logodark);
   width: 100%;
   padding: 1em;
   margin-top: 10px;
@@ -215,7 +203,11 @@ Comment field
 
 .comment-section textarea {
   resize: none;
-  height: 120px;
+  height: 150px;
+}
+
+.comment-section .btn {
+  width: 150px;
 }
 
 /* ======
@@ -224,15 +216,16 @@ Media Queries
 
 @media (min-width: 800px) {
   .post {
-    grid-template-columns:
-      minmax(300px, 60%)
-      minmax(1em, 1em)
-      minmax(200px, 25%);
+    grid-template-columns: minmax(300px, 75%) minmax(1em, 1em) minmax(1em, 1em) minmax(200px, 25%);
     grid-template-areas:
       "postimage postimage sidebar"
       "blogtext blogtext  sidebar"
       "careinfo careinfo ...."
       "comment comment ....";
+  }
+
+  .post-modal {
+    padding: 2em;
   }
   .post-image-modal {
     max-width: 90%;
@@ -240,4 +233,7 @@ Media Queries
 }
 
 @media (min-width: 600px) {
+  .post-modal {
+    padding: 2em;
+  }
 }
