@@ -108,8 +108,9 @@ Hero
   padding: 0em 0em 1em 0em;
   background: var(--body2);
   border-radius: 4px;
-  animation: fadeVisibility 0.5s;
 }
+
+/* animation: fadeVisibility 0.5s;
 
 @keyframes fadeVisibility {
   0% {
@@ -118,7 +119,7 @@ Hero
   100% {
     opacity: 1;
   }
-}
+} */
 
 .carousel-card img,
 .pop-post-card img {
