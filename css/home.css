@@ -91,12 +91,12 @@ Hero
   background-color: transparent;
   font-size: 3rem;
   cursor: pointer;
-  color: var(--body2);
+  color: var(--logodark);
   height: 90%;
 }
 
 .carousel-wrap button:hover {
-  color: var(--body);
+  color: var(--logo);
 }
 
 #next-btn {
@@ -116,7 +116,7 @@ Hero
   padding: 0em 0em 1em 0em;
   background: var(--body2);
   border-radius: 4px;
-  animation: fadeVisibility 0.8s;
+  animation: fadeVisibility 0.4s;
 }
 
 @keyframes fadeVisibility {
