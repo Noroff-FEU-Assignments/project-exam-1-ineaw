@@ -61,8 +61,7 @@ async function getCarouselPosts() {
            <h3 class="carousel-title">${title}</h3>
         <p>${postContent}</p>
            <a href="post.html?id=${post}" class="blog-link">Read more</a>
-           
-</figure`;
+           </figure`;
     }
   } catch (error) {
     console.log(error);

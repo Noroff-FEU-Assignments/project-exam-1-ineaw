@@ -50,6 +50,15 @@ body {
   margin: 0 auto;
 }
 
+.sideposts p {
+  color: var(--text);
+}
+
+.email-error p {
+  color: rgb(105, 20, 20);
+  font-size: 0.9rem;
+}
+
 /* ======
   Media Queries
   ====== */

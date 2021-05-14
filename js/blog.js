@@ -48,7 +48,8 @@ morePosts.addEventListener("click", () => {
       console.log(results);
       for (let i = 8; i < results.length; i++) {
         const post = results[i]._embedded["wp:featuredmedia"]["0"].source_url;
-        const postcontent = results[i].title.rendered;
+        const postContent = results[i].excerpt.rendered;
+        const title = results[i].title.rendered;
         console.log(post);
         const blogPost = results[i].id;
         const postDate = new Date(results[i].date).toLocaleString("en-US", {
@@ -59,7 +60,8 @@ morePosts.addEventListener("click", () => {
         <figure class="blog-post-card">
     <a href="post.html?id=${blogPost}"> <img src="${post}"/></a>
     <p class="blog-date"<time>${postDate}</time>, By <a href="./about.html">Ine AW</a></p>
-    <h3>${postcontent}</h3>
+    <h3>${title}</h3>
+    <p> ${postContent} </p>
        <a href="post.html?id=${blogPost}" class="blog-link">Read more</a>
         </figure> `;
         morePosts.style.display = "none";
