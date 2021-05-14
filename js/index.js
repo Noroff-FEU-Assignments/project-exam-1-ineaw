@@ -10,6 +10,7 @@ async function getPosts() {
   try {
     const response = await fetch(url + `?per_page=6&_embed`);
     const posts = await response.json();
+    // page = response.headers.get("x-wp-totalpages");
     recentPosts.innerHTML = "";
 
     for (let i = 0; i < posts.length; i++) {
@@ -41,6 +42,8 @@ async function getCarouselPosts() {
   try {
     let response = await fetch(url + `?page=${page}` + `&per_page=1` + `&_embed`);
     let posts = await response.json();
+    // page = response.headers.get("x-wp-totalpages");
+
     carouselContainer.innerHTML = "";
 
     let i = 0;
@@ -65,7 +68,7 @@ async function getCarouselPosts() {
     }
   } catch (error) {
     console.log(error);
-    postContainer.innerHTML = message("An error occured when trying to load", error);
+    // postContainer.innerHTML = message("An error occured when trying to load", error);
   }
 }
 getCarouselPosts();
