@@ -80,22 +80,21 @@ Hero
   position: absolute;
   display: block;
   border: none;
-  background-color: transparent;
+  background: none;
   font-size: 3rem;
   cursor: pointer;
   color: var(--logodark);
   height: 700px;
-  z-index: 5;
 }
 
 #next-btn {
   right: 0;
-  margin-left: 2px;
+  margin-left: 4px;
 }
 
 #prev-btn {
   left: 0;
-  margin-right: 2px;
+  margin-right: 4px;
   margin-top: 4px;
 }
 .carousel-card,
