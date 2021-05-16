@@ -11,9 +11,6 @@ main {
   background-color: var(--highlight);
 }
 
-/* =====
-Breadcrumbs
-===== */
 /* ======
 Blog Post
 ====== */
@@ -104,14 +101,14 @@ Modal
   z-index: 3;
 }
 
-.modal-dialog {
+/* .modal-dialog {
   max-width: 100%;
-}
+} */
 
 .post-image-modal img {
   display: block;
   height: auto;
-  max-width: 100%;
+  width: 100%;
 }
 
 .post-modal.is-visible {
@@ -177,7 +174,7 @@ Comment field
 Media Queries
 ====== */
 
-@media (min-width: 800px) {
+@media (min-width: 801px) {
   .post {
     grid-template-columns: minmax(300px, 75%) minmax(1em, 1em) minmax(1em, 1em) minmax(200px, 25%);
     grid-template-areas:
@@ -186,15 +183,15 @@ Media Queries
       "careinfo careinfo ...."
       "comment comment ....";
   }
-  .post-modal {
+  /* .post-modal {
     padding: 2em;
-  }
-  .post-image-modal {
-    max-width: 90%;
+  } */
+  .post-image-modal img {
+    max-width: 600px;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 601px) {
   .post-modal {
     padding: 2em;
   }

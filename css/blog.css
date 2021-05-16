@@ -68,7 +68,7 @@ Blog posts
 Media Queries
 ====== */
 
-@media (min-width: 800px) {
+@media (min-width: 801px) {
   .blog-grid {
     grid-template-columns: 1fr 1fr;
   }

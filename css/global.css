@@ -30,7 +30,7 @@ html,
 body {
   background-color: var(--highlight2);
 
-  /* background-color: #ffff; */
+  /* background-color: var(--body2); */
   min-height: 100vh;
   scroll-behavior: smooth;
 }
@@ -118,11 +118,12 @@ Main Navigation
 ====== */
 
 .header {
-  width: 100%;
   background-color: var(--highlight2);
 }
 
 .header-content {
+  width: 50%;
+
   display: flex;
   align-items: center;
 }
@@ -189,6 +190,10 @@ Main Navigation
   font-size: 2rem;
 }
 
+.close-nav:focus,
+.open-nav:focus {
+  color: var(--accent);
+}
 /* =====
 Breadcrumbs
 ===== */
@@ -328,10 +333,11 @@ Media Queries
 
 /* Desktop */
 
-@media (min-width: 820px) {
-  main {
+@media (min-width: 801px) {
+  /* main {
     margin: 0px 100px;
-  }
+    background-color: var(--highlight2);
+  } */
   .open-nav,
   .close-nav {
     display: none;
@@ -339,7 +345,7 @@ Media Queries
 
   .nav {
     position: initial;
-    width: 50%;
+    width: 100%;
   }
 
   .nav-list {

@@ -43,7 +43,7 @@
             <li class="nav-item">
               <a href="index.html" class="nav-link">Home</a>
             </li>
-            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link" tabindex="0">Blog</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
@@ -66,20 +66,16 @@
           <div class="btn news-btn" a href="#">Get your guide</div>
         </section>
       </article>
-
-      <article class="popular-posts">
-        <!-- <h2>Recent stories</h2> -->
-        <section class="pop-post-wrap">
-          <div class="loader"></div>
+      <article class="carousel-container">
+        <h2>Popular Stories</h2>
+        <section class="carousel-wrap">
+          <button id="prev-btn" tabindex="0">&#10094;</button>
+          <button id="next-btn" tabindex="0">&#10095;</button>
+          <ul class="carousel">
+            <div class="loader"></div>
+          </ul>
         </section>
       </article>
-      <section class="news">
-        <div class="news-topic">
-          <h2>Plant Rescue</h2>
-        </div>
-        <p class="news-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-        <a class="btn news-btn" a href="blog.html">Read more</a>
-      </section>
       <section class="newsletter">
         <div class="newsletter-topic">
           <h2>Join the green side</h2>
@@ -91,21 +87,24 @@
           <div class="email-error"></div>
         </div>
       </section>
-      <article class="carousel-container">
-        <h2>Popular Stories</h2>
-        <section class="carousel-wrap">
-          <button id="prev-btn">&#10094;</button>
-          <button id="next-btn">&#10095;</button>
 
-          <div class="carousel">
-            <div class="loader"></div>
-          </div>
+      <article class="popular-posts">
+        <!-- <h2>Recent stories</h2> -->
+        <section class="pop-post-wrap">
+          <div class="loader"></div>
         </section>
       </article>
+      <!-- <section class="news">
+        <div class="news-topic">
+          <h2>Plant Rescue</h2>
+        </div>
+        <p class="news-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <a class="btn news-btn" a href="blog.html">Read more</a>
+      </section> -->
     </main>
     <footer class="footer">
       <ul class="footer-main">
-        <li class="footer-link"><a href="about.html">About</a></li>
+        <li class="footer-link"><a href="about.html" role="select" tabindex="0">About</a></li>
         <li class="footer-link"><a href="contact.html">Contact</a></li>
         <li class="footer-link"><a href="#">Disclosure</a></li>
         <li class="footer-link"><a href="#">Privacy Policy</a></li>

@@ -1,23 +1,14 @@
-const next = document.querySelector("#next-btn");
-const previous = document.querySelector("#prev-btn");
+const next = document.getElementById("next-btn");
+const prev = document.getElementById("prev-btn");
 
-function prevPage() {
-  if (page === 1) {
-    page = 6;
-  } else {
-    page--;
-  }
-  getCarouselPosts();
-}
+/* Move the carousel 300px ahead */
 
-function nextPage() {
-  if (page === 5) {
-    page = 1;
-  } else {
-    page++;
-  }
-  getCarouselPosts();
-}
+next.onclick = function () {
+  document.querySelector(`.carousel`).scrollLeft += 300;
+};
 
-previous.addEventListener("click", prevPage);
-next.addEventListener("click", nextPage);
+/* Move the carousel 300px backwards */
+
+prev.onclick = function () {
+  document.querySelector(`.carousel`).scrollLeft += -300;
+};

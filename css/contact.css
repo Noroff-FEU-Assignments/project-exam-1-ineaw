@@ -11,7 +11,7 @@ h2 {
 }
 #contactForm label {
   display: block;
-  margin: 5px 20px;
+  margin: 10px 20px;
   color: var(--logo);
   text-align: left;
 }
@@ -22,6 +22,7 @@ h2 {
   resize: none;
   padding: 1em;
   font-size: 0.8rem;
+  margin-top: 5px;
 }
 
 #contactForm textarea {

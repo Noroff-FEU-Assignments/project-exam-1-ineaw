@@ -23,7 +23,7 @@ async function getRecent() {
       <figure class="recent-image">
       <a href="post.html?id=${post}"> <img src="${img}"/> 
       <p class="blog-date">By Ine AW, Posted <time>${postDate}</time></p>
-      <h3 class="carousel-title">${title}</h3>
+      <h3 class="aside-title">${title}</h3>
       </a> </figure> `;
     }
   } catch (error) {
