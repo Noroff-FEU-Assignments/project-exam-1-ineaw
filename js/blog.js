@@ -19,6 +19,7 @@ function createHTML(result) {
   for (let i = 0; i < 8; i++) {
     {
       const img = result[i]._embedded["wp:featuredmedia"]["0"].source_url;
+      const alt = result[i]._embedded["wp:featuredmedia"]["0"].alt_text;
       const post = result[i].id;
       const postContent = result[i].excerpt.rendered;
       const title = result[i].title.rendered;
@@ -29,7 +30,7 @@ function createHTML(result) {
 
       postContainer.innerHTML += `
        <figure class="blog-post-card">
-       <a href="post.html?id=${post}"> <img src="${img}"/>   </a>
+       <a href="post.html?id=${post}"> <img src="${img}" alt="${alt}"/></a>
        <p class="blog-date"<time>${postDate}</time>, By <a href="./about.html">Ine AW</a></p>
     <h3 class="carousel-title">${title}</h3>
    <p> ${postContent} </p>
@@ -47,10 +48,11 @@ morePosts.addEventListener("click", () => {
       const results = await response.json();
       console.log(results);
       for (let i = 8; i < results.length; i++) {
-        const post = results[i]._embedded["wp:featuredmedia"]["0"].source_url;
+        const img = results[i]._embedded["wp:featuredmedia"]["0"].source_url;
+        const alt = results[i]._embedded["wp:featuredmedia"]["0"].alt_text;
         const postContent = results[i].excerpt.rendered;
         const title = results[i].title.rendered;
-        console.log(post);
+        console.log(results);
         const blogPost = results[i].id;
         const postDate = new Date(results[i].date).toLocaleString("en-US", {
           month: "long",
@@ -58,8 +60,8 @@ morePosts.addEventListener("click", () => {
         });
         postContainer.innerHTML += `
         <figure class="blog-post-card">
-    <a href="post.html?id=${blogPost}"> <img src="${post}"/></a>
-    <p class="blog-date"<time>${postDate}</time>, By <a href="./about.html">Ine AW</a></p>
+    <a href="post.html?id=${blogPost}"> <img src="${img}" alt="${alt}"/></a>
+    <p class="blog-date"<time>${postDate}</time>, By <a href="about.html">Ine AW</a></p>
     <h3>${title}</h3>
     <p> ${postContent} </p>
        <a href="post.html?id=${blogPost}" class="blog-link">Read more</a>

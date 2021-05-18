@@ -23,21 +23,22 @@ async function getPosts() {
       year: "2-digit",
     });
 
+    const alt = post._embedded["wp:featuredmedia"]["0"].alt_text;
     const img = post._embedded["wp:featuredmedia"]["0"].source_url;
     changeTitle.innerHTML = `${post.title.rendered} | The Green Side Blog `;
 
     postImage.innerHTML = `
-    <header class="blog-header"><h2>${post.title.rendered}</h2>   
+     <header class="blog-header"><h2>${post.title.rendered}</h2>   
      <div class="blog-date"> Posted <time datetime="2021-04-21">${newDate}</time> by Ine AW</div>
-    </header>
- <img src="${img}" alt="alt text"/>
+     </header>
+     <img src="${img}" alt="${alt}"/>
 
 `;
     postContainer.innerHTML = `  
-<article>${post.content.rendered}</article>
+    <article>${post.content.rendered}</article>
 `;
     modalImage.innerHTML = `<figure class="post-image-modal">          
-    <img src="${img}" alt="alt text"/>
+    <img src="${img}" alt="${alt}"/>
 `;
   } catch (error) {
     console.log(error);

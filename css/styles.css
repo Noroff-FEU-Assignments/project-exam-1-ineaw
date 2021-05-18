@@ -1,0 +1,158 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  font-family: "roboto", Helvetica, sans-serif;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+:root {
+  --body: #ebddde;
+  --body2: #f1e8e9;
+  --main: #fae8df;
+  --headers: #325637;
+  --accent: #483437;
+  --highlight: #d1d9c5;
+  --highlight2: #dfe5d6;
+  --logo: #22593d;
+  --logodark: #18432d;
+  --lila-accent: #e6dcec;
+  --background-accent: #faf3d3;
+  --text: #081b11;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+main {
+  background-color: var(--highlight);
+}
+
+/* =====
+typography
+===== */
+
+h1 {
+  font-family: "DM serif display", serif;
+  font-weight: 800;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 60px;
+  color: var(--logodark);
+  padding: 0.2em;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 30px;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: 200;
+  line-height: 25px;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "DM serif display", serif;
+  color: var(--logodark);
+}
+
+p {
+  color: var(--text);
+}
+.blog-link {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-family: "DM serif display", serif;
+  color: var(--logo);
+}
+
+.blog-link:hover,
+.blog-link:focus {
+  color: var(--logodark);
+}
+
+.blog-date,
+.blog-date a,
+time {
+  font-size: 0.8rem;
+  margin-left: 0;
+  color: var(--text);
+}
+
+/* =====
+components
+===== */
+
+.btn {
+  background-color: transparent;
+  padding: 0.5em 1.5em;
+  border: 2px solid var(--logo);
+  color: var(--logo);
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--highlight2);
+  background-color: var(--logo);
+  text-decoration: underline;
+  transition: 300ms ease-in-out;
+}
+
+/* =====
+Loader
+===== */
+
+.loader {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 50px 100px;
+  justify-self: center;
+}
+
+.loader::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 8px solid var(--lila-accent);
+  border-color: var(--lila-accent) transparent var(--accent) transparent;
+  animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 801px) {
+}

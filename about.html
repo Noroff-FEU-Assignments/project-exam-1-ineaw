@@ -12,8 +12,9 @@
     <script src="https://kit.fontawesome.com/40834ce6db.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Prata&display=swap" rel="stylesheet" />
-    <link href="css/global.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
     <link href="css/about.css" rel="stylesheet" />
+    <link href="css/navigation.css" rel="stylesheet" />
     <link href="css/aside.css" rel="stylesheet" />
     <!-- Hotjar Tracking Code for https://thegreenside.netlify.app/ -->
 <script>
@@ -31,18 +32,18 @@
     <a class="logo" href="index.html">
       <h1>The Green Side</h1>
     </a>
-    <header class="header">
-      <div class="header-content">
-        <button aria-label="Open navigation" class="open-nav">&#9776;</button>
-        <nav class="nav">
-          <button aria-label="Close navigation" class="close-nav">&times;</button>
-          <ul class="nav-list">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          </ul>
-        </nav>
+    <header class="navigation">
+      <div class="nav-container">
+        <button aria-label="open navigation" class="open-nav">☰</button>
+        <nav class="nav-content">
+        <button aria-label="close navigation" class="close-nav">×</button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
       </div>
     </header>
     <main>   
@@ -56,7 +57,7 @@
             <img src="/images/ManWithPlant.jpg" />
           </figure>
           <div class="about-text">
-            <h3 class="about-header">Hi fellow plant friend!</h3>
+            <h2 class="about-header">Hi fellow plant friend!</h2>
             <p><strong>My passion for plants started when</strong> et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
             <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
             <h4 class="about-subheader">Never endig journey</h4>
@@ -115,6 +116,5 @@
     <script src="js/components/recent.js"></script>
     <script src="js/components/errors.js"></script>
     <script src="js/components/forms.js"></script>
-
   </body>
 </html>

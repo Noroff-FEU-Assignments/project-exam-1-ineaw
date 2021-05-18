@@ -2,8 +2,11 @@ h2 {
   color: var(--logo);
 }
 
-.contact {
+main {
   background-color: var(--highlight);
+}
+
+.contact {
   padding: 2em;
 }
 #contactForm {
@@ -46,4 +49,7 @@ h2 {
   color: var(--accent);
   margin: 20px;
   font-size: 1.5rem;
+}
+
+@media (min-width: 801px) {
 }
