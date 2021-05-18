@@ -21,7 +21,7 @@
   --logo: #22593d;
   --logodark: #18432d;
   --lila-accent: #e6dcec;
-  --background-accent: #faf3d3;
+  --white: #fff;
   --text: #081b11;
 }
 
@@ -51,7 +51,7 @@ h1 {
 h2 {
   text-align: center;
   font-size: 3rem;
-  line-height: 40px;
+  line-height: 45px;
   margin-bottom: 20px;
 }
 
@@ -61,8 +61,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.3rem;
-  font-weight: 200;
+  font-size: 1.5rem;
   line-height: 25px;
 }
 
@@ -103,13 +102,13 @@ components
 
 .btn {
   background-color: transparent;
-  padding: 0.5em 1.5em;
+  padding: 0.3em 1em;
   border: 2px solid var(--logo);
   color: var(--logo);
   cursor: pointer;
   text-align: center;
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 6px;
   margin-top: 10px;
 }
 

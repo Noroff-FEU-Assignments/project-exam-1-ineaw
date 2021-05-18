@@ -4,7 +4,7 @@ body {
 }
 
 main {
-  background-color: #fff;
+  background-color: var(--body2);
 }
 .header-home {
   width: 100%;
@@ -93,7 +93,7 @@ Hero
   border: none;
   padding: 0em 0.3em;
   background: none;
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
   margin-top: 150px;
   color: var(--logo);
@@ -102,18 +102,25 @@ Hero
 
 #next-btn {
   right: 0;
+  margin-right: 20px;
 }
 
 #prev-btn {
   left: 0;
+  margin-left: 20px;
 }
 
 #prev-btn:focus,
 #next-btn:focus,
 #prev-btn:hover,
 #next-btn:hover {
-  background: #ffffff60;
+  background: #ffffff83;
+  border-radius: 2px;
+  /*height: 100px;
+  width: 100px;
+  */
 }
+
 .carousel-card,
 .pop-post-card {
   display: flex;
@@ -122,7 +129,7 @@ Hero
   max-width: 300px;
   margin: 1em;
   padding: 0em 0em 1em 0em;
-  background: var(--body2);
+  background: var(--white);
   border-radius: 4px;
 }
 
@@ -280,9 +287,10 @@ Media Queries
   }
 
   .carousel-wrap button {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
+/* Larger screens */
 
 @media only screen and (min-width: 1280px) {
   .hero-card {
