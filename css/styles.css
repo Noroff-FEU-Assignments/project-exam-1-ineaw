@@ -28,6 +28,7 @@
 html,
 body {
   min-height: 100vh;
+  background-color: var(--body2);
 }
 
 main {
@@ -139,8 +140,8 @@ Loader
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 8px solid var(--lila-accent);
-  border-color: var(--lila-accent) transparent var(--accent) transparent;
+  border: 8px solid var(--highlight2);
+  border-color: var(--highlight2) transparent var(--highlight2) transparent;
   animation: loader 0.8s linear infinite;
 }
 

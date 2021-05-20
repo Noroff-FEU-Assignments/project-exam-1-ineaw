@@ -34,8 +34,9 @@ Header Navigation
 
 .nav-link:hover,
 .nav-link:focus {
-  text-decoration: 3px solid var(--accent) underline;
+  text-decoration: 3px solid underline;
   text-underline-position: under;
+  -webkit-text-decoration: underline;
 }
 .close-nav,
 .open-nav {
@@ -111,6 +112,7 @@ Breadcrumbs
 .breadcrumbs a:focus {
   text-decoration: underline 2px solid;
   text-underline-position: under;
+  -webkit-text-decoration: solid underline;
 }
 /* ======
 Footer
@@ -154,6 +156,7 @@ Footer
       transition: 250ms ease-in-out; */
   text-decoration: underline 2px solid;
   text-underline-position: under;
+  -webkit-text-decoration: underline;
 }
 
 .copyright {

@@ -6,7 +6,7 @@ const carouselContainer = document.querySelector(".carousel");
 
 async function getPosts() {
   try {
-    const response = await fetch(url + `?per_page=8&_embed`);
+    const response = await fetch(url + `?per_page=6&_embed`);
     const posts = await response.json();
     recentPosts.innerHTML = "";
     carouselContainer.innerHTML = "";
@@ -28,7 +28,7 @@ async function getPosts() {
       <p class="blog-date"<time>${postDate}</time>, By <a href="about.html">Ine AW</a></p>
       <h3 class="pop-post-title">${title}</h3>
       <p>${postContent}</p>
-      <a href="post.html?id=${post}" class="blog-link">Read more</a>
+      <a href="post.html?id=${post}" class="blog-link" aria-label="read more about ${title}">Read more</a>
       </figure`;
 
       carouselContainer.innerHTML += `
@@ -37,7 +37,7 @@ async function getPosts() {
       <a href="post.html?id=${post}"> <img src="${img}" alt="${alt}"/> </a>
       <p class="blog-date"<time>${postDate}</time>, By <a href="about.html">Ine AW</a></p>
       <h3 class="carousel-title">${title}</h3>
-      <a href="post.html?id=${post}" type="button" class="blog-link">Read more</a>
+      <a href="post.html?id=${post}" class="blog-link" aria-label="read more about ${title}">Read more</a>
       </figure <li>`;
     }
   } catch (error) {

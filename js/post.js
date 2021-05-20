@@ -2,15 +2,12 @@ const url = "https://ineaw.no/the-green-side/wp-json/wp/v2/posts/";
 
 const postContainer = document.querySelector(".blog-text");
 const postImage = document.querySelector(".post-image");
-const modalImage = document.querySelector(".modal-dialog");
+const modalImage = document.querySelector(".post-modal");
 const changeTitle = document.querySelector("title");
 
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
-
-console.log(params);
-
 const id = params.get("id");
 
 async function getPosts() {
@@ -25,13 +22,15 @@ async function getPosts() {
 
     const alt = post._embedded["wp:featuredmedia"]["0"].alt_text;
     const img = post._embedded["wp:featuredmedia"]["0"].source_url;
-    changeTitle.innerHTML = `${post.title.rendered} | The Green Side Blog `;
+
+    changeTitle.innerHTML = `${post.title.rendered} | The Green Side Blog`;
 
     postImage.innerHTML = `
-     <header class="blog-header"><h2>${post.title.rendered}</h2>   
+     <header class="blog-header">
+     <h2>${post.title.rendered}</h2>   
      <div class="blog-date"> Posted <time datetime="2021-04-21">${newDate}</time> by Ine AW</div>
      </header>
-     <img src="${img}" alt="${alt}"/>
+    <figure><img src="${img}" alt="${alt}"/></figure>
 
 `;
     postContainer.innerHTML = `  

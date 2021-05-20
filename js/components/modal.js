@@ -1,8 +1,8 @@
-const openImage = document.querySelectorAll("[data-open");
-const closeImage = document.querySelectorAll("[data-close");
+const openImage = document.querySelectorAll("[data-open]");
+const closeImage = document.querySelectorAll("[data-close]");
 const visible = "is-visible";
 
-/* Open modal image */
+/* Iterate over object and add modal */
 
 for (const el of openImage) {
   el.addEventListener("click", function () {
@@ -11,7 +11,7 @@ for (const el of openImage) {
   });
 }
 
-/* Close with Button */
+/* Iterate over object and remove modal */
 
 for (const el of closeImage) {
   el.addEventListener("click", function () {

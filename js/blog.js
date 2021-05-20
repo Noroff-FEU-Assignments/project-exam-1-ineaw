@@ -7,7 +7,6 @@ async function getPosts() {
   try {
     const response = await fetch(url + `?per_page=100` + `&_embed`);
     const result = await response.json();
-    console.log(result);
     createHTML(result);
   } catch (error) {
     console.log(error);
@@ -65,7 +64,7 @@ morePosts.addEventListener("click", () => {
     <h3>${title}</h3>
     <p> ${postContent} </p>
        <a href="post.html?id=${blogPost}" class="blog-link">Read more</a>
-        </figure> `;
+        </figure>`;
         morePosts.style.display = "none";
         loader.style.display = "none";
       }

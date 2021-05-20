@@ -16,17 +16,6 @@
     <link href="css/post.css" rel="stylesheet" />
     <link href="css/navigation.css" rel="stylesheet" />
     <link href="css/aside.css" rel="stylesheet" />
-    <!-- Hotjar Tracking Code for https://thegreenside.netlify.app/ -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:2393961,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
   </head>
   <body>
     <a class="logo" href="index.html">
@@ -52,17 +41,15 @@
         <li><a href="blog.html">Blog</a></li>
         <li><a href="#">Post</a></li>
       </ul>
-      <div class="post-modal" id="post-modal">
-        <div class="modal-dialog">
-          <div role="dialog" aria-label="featured image enlarged"></div>
+      <div class="post-modal" id="post-modal"  role="modal" aria-label="featured image enlarged">
           <section class="modal-content">
-            <button aria-label="close modal" class="close-modal" data-close></button>
+            <button aria-label="close modal" class="close-modal" ></button>
           </section>
         </div>
       </div>
       <article class="post">
         <section class="post-container">
-      <div tabindex=0 aria-label="open modal" class="modal-button" id="open-modal" data-open="post-modal">
+      <div class="modal-button" role="button" aria-label="open modal"  id="open-modal" data-open="post-modal">
         <figure class="post-image">
 <div class="loader"></div>
 </figure>
@@ -82,6 +69,7 @@
           <section>
           <h3 class="sideposts-header">Recent posts</h3>
           <div class="sideposts-recent">
+            <div class="message"></div>
           </div>
         <section class="newsletter-aside">
             <div class="newsletter-topic">
@@ -111,7 +99,7 @@
       </section>
     </article>
     </main>
-    <footer class="footer">
+    <section class="footer">
       <ul class="footer-main">
         <li class="footer-link"><a href="about.html">About</a></li>
         <li class="footer-link"><a href="contact.html">Contact</a></li>
@@ -119,19 +107,20 @@
         <li class="footer-link"><a href="#">Privacy Policy</a></li>
       </ul>
       <ul class="footer-social">
-        <h4>Follow</h4>
+        <li class="social-link"><h3>Follow</h3></li>
         <li class="social-link"><a href="#">Facebook</a></li>
         <li class="social-link"><a href="#">Pinterest</a></li>
         <li class="social-link"><a href="#">Instagram</a></li>
       </ul>
       <ul class="footer-podcast">
-        <h4>Listen</h4>
+        <li class="social-link"><h3>Listen</h3></li>
         <li class="social-link"><a href="#">Spotify</a></li>
         <li class="social-link"><a href="#">Apple Music</a></li>
         <li class="social-link"><a href="#">Soundcloud</a></li>
       </ul>
-    </footer>
-    <p class="copyright">© Copyright 2021. All rights reserved. Website by <strong> Ine AW.</strong></p>
+    </section>
+  </footer>
+  <p class="copyright">© Copyright 2021. All rights reserved. Website by Ine AW.</p>
     <script src="js/post.js"></script>
     <script src="js/components/recent.js"></script>
     <script src="js/components/modal.js"></script>

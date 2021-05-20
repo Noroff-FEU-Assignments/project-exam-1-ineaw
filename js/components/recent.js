@@ -27,7 +27,7 @@ async function getRecent() {
     }
   } catch (error) {
     console.log(error);
-    // aside.innerHTML = message("An error occured when trying to load", error);
+    aside.innerHTML = message("An error occured when trying to load", error);
   }
 }
 getRecent();
