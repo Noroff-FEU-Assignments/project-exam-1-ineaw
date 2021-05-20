@@ -21,6 +21,8 @@
   --logo: #22593d;
   --logodark: #18432d;
   --lila-accent: #dbcce4;
+  --lila-accent3: #dbcce9;
+
   --white: #fff;
   --text: #081b11;
 }
@@ -28,6 +30,11 @@
 html,
 body {
   min-height: 100vh;
+  background-color: var(--lila-accent);
+}
+
+main {
+  background-color: var(--highlight);
 }
 
 /* =====
@@ -89,7 +96,7 @@ p {
 .blog-date a,
 time {
   font-size: 0.8rem;
-  margin-left: 0px;
+  margin-left: 5px;
   color: var(--text);
 }
 

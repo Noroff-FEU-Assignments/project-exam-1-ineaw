@@ -2,7 +2,7 @@
   box-shadow: inset 0 -0.2em hsla(347, 56%, 28%, 0.738);
 } */
 main {
-  background-color: var(--body2);
+  background-color: var(--white);
 }
 .blog-page-header {
   padding: 2em;
