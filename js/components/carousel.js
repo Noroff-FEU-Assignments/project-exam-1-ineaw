@@ -1,14 +1,20 @@
 const next = document.getElementById("next-btn");
 const prev = document.getElementById("prev-btn");
 
-/* Move the carousel 300px ahead */
+const carouselWidth = carouselContainer.offsetWidth;
+
+/* Move the carousel 300px backwards 
+change to if carousel is equal to deskpot size use offsetwidth
+and if carousel is equal to mobile use px*/
 
 next.onclick = function () {
-  document.querySelector(`.carousel`).scrollLeft += 260;
+  carouselContainer.scrollLeft += carouselWidth;
 };
 
-/* Move the carousel 300px backwards */
+/* Move the carousel 300px backwards 
+change to if carousel is equal to deskpot size use offsetwidth
+and if carousel is equal to mobile use px*/
 
 prev.onclick = function () {
-  document.querySelector(`.carousel`).scrollLeft += -260;
+  carouselContainer.scrollLeft -= carouselWidth;
 };

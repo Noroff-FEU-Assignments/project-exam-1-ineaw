@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: column;
   background-color: var(--lila-accent);
-  padding: 1.5em;
+  padding: 1em;
   border-radius: 4px;
-  width: 100%;
+  max-width: 400px;
 }
 
 /* .aside-title {
@@ -24,7 +24,7 @@
 
 .sideposts input {
   border: none;
-  max-width: 150px;
+  width: 200px;
   padding: 0.5em;
   font-size: 0.7rem;
   box-shadow: inset 0 -0.2em hsl(336, 52%, 18%);
@@ -66,6 +66,7 @@
   .sideposts {
     width: 250px;
   }
+
   .sideposts input {
     background-color: transparent;
   }

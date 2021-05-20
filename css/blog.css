@@ -45,9 +45,9 @@ Blog posts
   transition: 0.3s all ease-in-out;
 }
 
-.blog-post-card:hover {
+/* .blog-post-card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
+} */
 
 .blog-post-card h3 {
   font-family: "DM serif display", serif;
@@ -68,7 +68,12 @@ time {
 /* ======
 Media Queries
 ====== */
-
+/* @media (min-width: 601px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+ */
 @media (min-width: 801px) {
   .blog-grid {
     grid-template-columns: 1fr 1fr;

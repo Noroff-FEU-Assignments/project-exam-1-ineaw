@@ -20,7 +20,7 @@
   --highlight2: #dfe5d6;
   --logo: #22593d;
   --logodark: #18432d;
-  --lila-accent: #e6dcec;
+  --lila-accent: #dbcce4;
   --white: #fff;
   --text: #081b11;
 }
@@ -28,11 +28,6 @@
 html,
 body {
   min-height: 100vh;
-  background-color: var(--body2);
-}
-
-main {
-  background-color: var(--highlight);
 }
 
 /* =====
@@ -77,23 +72,24 @@ p {
   color: var(--text);
 }
 .blog-link {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   cursor: pointer;
-  font-size: 1.5rem;
-  font-family: "DM serif display", serif;
-  color: var(--logo);
+  font-size: 1rem;
+  font-family: "roboto", sans-serif;
+  color: var(--logodark);
+  margin-right: 0.5em;
 }
 
 .blog-link:hover,
 .blog-link:focus {
-  color: var(--logodark);
+  color: var(--logo);
 }
 
 .blog-date,
 .blog-date a,
 time {
   font-size: 0.8rem;
-  margin-left: 0;
+  margin-left: 0px;
   color: var(--text);
 }
 

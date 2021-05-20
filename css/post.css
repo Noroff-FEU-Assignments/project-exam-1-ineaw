@@ -167,7 +167,7 @@ Media Queries
 
 @media (min-width: 801px) {
   .post {
-    grid-template-columns: minmax(300px, 75%) minmax(1em, 1em) minmax(1em, 1em) minmax(200px, 25%);
+    grid-template-columns: minmax(300px, 50%) minmax(1em, 1em) minmax(1em, 1em) minmax(200px, 25%);
     grid-template-areas:
       "postimage postimage sidebar"
       "blogtext blogtext  sidebar"

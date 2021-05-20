@@ -32,7 +32,6 @@ function createHTML(result) {
        <a href="post.html?id=${post}"> <img src="${img}" alt="${alt}"/></a>
        <p class="blog-date"<time>${postDate}</time>, By <a href="./about.html">Ine AW</a></p>
     <h3 class="carousel-title">${title}</h3>
-   <p> ${postContent} </p>
     <a href="post.html?id=${post}" class="blog-link">Read more</a>
        </figure> `;
       loader.style.display = "none";
@@ -62,7 +61,6 @@ morePosts.addEventListener("click", () => {
     <a href="post.html?id=${blogPost}"> <img src="${img}" alt="${alt}"/></a>
     <p class="blog-date"<time>${postDate}</time>, By <a href="about.html">Ine AW</a></p>
     <h3>${title}</h3>
-    <p> ${postContent} </p>
        <a href="post.html?id=${blogPost}" class="blog-link">Read more</a>
         </figure>`;
         morePosts.style.display = "none";

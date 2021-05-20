@@ -72,9 +72,9 @@ Hero
   background-color: var(--highlight);
 }
 .carousel-wrap {
-  position: relative;
   display: flex;
   max-height: 400px;
+  max-width: 80vw;
 }
 
 .carousel {
@@ -84,8 +84,9 @@ Hero
   overflow-y: hidden;
   scrollbar-width: none;
   width: 100%;
+  max-width: 100vw;
   scroll-behavior: smooth;
-  /* scroll-snap-align: start; */
+  scroll-snap-align: center;
 }
 .carousel-container button {
   position: absolute;
@@ -102,12 +103,12 @@ Hero
 
 #next-btn {
   right: 0;
-  margin-right: 20px;
+  margin-left: 10px;
 }
 
 #prev-btn {
   left: 0;
-  margin-left: 20px;
+  margin-right: 5px;
 }
 
 #prev-btn:focus,
@@ -126,31 +127,44 @@ Hero
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 250px;
-  margin: 1em 1em 1em 0em;
+  max-width: 300px;
+  margin: 1em 1em 0em 0em;
   padding: 0em 0em 1em 0em;
   background: var(--white);
   border-radius: 4px;
 }
 
+.carousel-card {
+  overflow: hidden;
+}
 .carousel-card img,
 .pop-post-card img {
   max-width: 100%;
   height: 250px;
   object-fit: cover;
-  scroll-snap-align: center;
+
+  /* scroll-snap-align: center; */
+  transition: transform 0.5s ease;
 }
 
-.carousel-card:hover,
+.carousel-card:hover img {
+  transform: scale(1.05);
+}
+.pop-post-card {
+  max-width: 320px;
+  height: 100%;
+}
+
+/* .carousel-card:hover,
 .pop-post-card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
+} */
 
 .pop-post-card p,
 .pop-post-card h3,
 .carousel-card p,
 .carousel-card h3 {
-  padding: 0.5em 1em 0em 1em;
+  padding: 0.2em 0.1em 0em 0.2em;
 }
 .carousel-title,
 .pop-post-title {

@@ -3,6 +3,7 @@ const url = "https://ineaw.no/the-green-side/wp-json/wp/v2/posts";
 const recentPosts = document.querySelector(".pop-post-wrap");
 const aside = document.querySelector(".sideposts");
 const carouselContainer = document.querySelector(".carousel");
+const carouselCard = document.querySelector(".carousel-card");
 
 async function getPosts() {
   try {
@@ -25,9 +26,8 @@ async function getPosts() {
       recentPosts.innerHTML += `
       <figure class="pop-post-card">
       <a href="post.html?id=${post}"> <img src="${img}" alt="${alt}"/> </a>
-      <p class="blog-date"<time>${postDate}</time>, By <a href="about.html">Ine AW</a></p>
+      <figcaption class="blog-date"<time>${postDate}</time>, By <a href="about.html">Ine AW</a></figcaption>
       <h3 class="pop-post-title">${title}</h3>
-      <p>${postContent}</p>
       <a href="post.html?id=${post}" class="blog-link" aria-label="read more about ${title}">Read more</a>
       </figure`;
 
@@ -35,7 +35,7 @@ async function getPosts() {
       <li> 
       <figure class="carousel-card">
       <a href="post.html?id=${post}"> <img src="${img}" alt="${alt}"/> </a>
-      <p class="blog-date"<time>${postDate}</time>, By <a href="about.html">Ine AW</a></p>
+      <figcaption class="blog-date"<time>${postDate}</time>, By <a href="about.html">Ine AW</a></figcaption>
       <h3 class="carousel-title">${title}</h3>
       <a href="post.html?id=${post}" class="blog-link" aria-label="read more about ${title}">Read more</a>
       </figure <li>`;
