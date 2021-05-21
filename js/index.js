@@ -26,7 +26,7 @@ async function getPosts() {
       recentPosts.innerHTML += `
       <figure class="pop-post-card">
       <a href="post.html?id=${post}"> <img src="${img}" alt="${alt}"/> </a>
-      <figcaption class="blog-date"<time>${postDate}</time>, By <a href="about.html">Ine AW</a></figcaption>
+      <figcaption class="blog-date"<time>${postDate}</time> | By <a href="about.html">Ine AW</a></figcaption>
       <h3 class="pop-post-title">${title}</h3>
       <a href="post.html?id=${post}" class="blog-link" aria-label="read more about ${title}">Read more</a>
       </figure>`;
@@ -35,7 +35,7 @@ async function getPosts() {
       <li> 
       <figure class="carousel-card">
       <a href="post.html?id=${post}"> <img src="${img}" alt="${alt}"/> </a>
-      <figcaption class="blog-date"<time>${postDate}</time>, By <a href="about.html">Ine AW</a></figcaption>
+      <figcaption class="blog-date"<time>${postDate}</time> |  By <a href="about.html">Ine AW</a></figcaption>
       <h3 class="carousel-title">${title}</h3>
       <a href="post.html?id=${post}" class="blog-link" aria-label="read more about ${title}">Read more</a>
       </figure> 

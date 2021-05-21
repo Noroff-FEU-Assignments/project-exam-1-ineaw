@@ -28,9 +28,9 @@ async function getPosts() {
     postImage.innerHTML = `
      <header class="blog-header">
      <h2>${post.title.rendered}</h2>   
-     <div class="blog-date"> Posted <time datetime="2021-04-21">${newDate}</time> by Ine AW</div>
+     <div class="blog-date"> Posted <time datetime="2021-04-21">${newDate}</time> | by Ine AW</div>
      </header>
-    <figure><img src="${img}" alt="${alt}"/></figure>
+    <figure class="post-image"><img src="${img}" alt="${alt}"/></figure>
 
 `;
     postContainer.innerHTML = `  

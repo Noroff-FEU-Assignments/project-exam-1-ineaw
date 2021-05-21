@@ -9,20 +9,17 @@
   line-height: 1.7;
   font-size: 1rem;
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 :root {
-  --body: #ebddde;
-  --body2: #f1e8e9;
-  --main: #fae8df;
+  --accent: #443448;
+  --accent-vibrant: #7b3793;
   --headers: #325637;
-  --accent: #483437;
-  --highlight: #d1d9c5;
-  --highlight2: #dfe5d6;
+  --main: #d1d9c5;
+  --mainlight: #f4f7f5;
   --logo: #22593d;
   --logodark: #18432d;
   --lila-accent: #dbcce2;
-  --lila-accent3: #dbcce9;
-
   --white: #fff;
   --text: #081b11;
 }
@@ -30,11 +27,7 @@
 html,
 body {
   min-height: 100vh;
-  background-color: var(--white);
-}
-
-main {
-  background-color: var(--white);
+  background-color: var(--mainlight);
 }
 
 /* =====
@@ -122,7 +115,7 @@ components
 
 .btn:hover,
 .btn:focus {
-  color: var(--highlight2);
+  color: var(--mainlight);
   background-color: var(--logo);
   text-decoration: underline;
   transition: 300ms ease-in-out;
@@ -147,8 +140,8 @@ Loader
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 8px solid var(--highlight2);
-  border-color: var(--highlight2) transparent var(--highlight2) transparent;
+  border: 8px solid var(--mainlight);
+  border-color: var(--mainlight) transparent var(--mainlight) transparent;
   animation: loader 0.8s linear infinite;
 }
 

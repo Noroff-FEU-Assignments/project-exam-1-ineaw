@@ -11,6 +11,7 @@ async function getRecent() {
         break;
       }
       const img = recent[i]._embedded["wp:featuredmedia"]["0"].source_url;
+      const alt = recent[i]._embedded["wp:featuredmedia"]["0"].alt_text;
       const post = recent[i].id;
       const postContent = recent[i].excerpt.rendered;
       const title = recent[i].title.rendered;
@@ -20,7 +21,7 @@ async function getRecent() {
       });
       aside.innerHTML += `
       <figure class="recent-image">
-      <a href="post.html?id=${post}"> <img src="${img}"/> 
+      <a href="post.html?id=${post}"> <img src="${img}" alt="${alt}"/> 
       <p class="blog-date">By Ine AW, Posted <time>${postDate}</time></p>
       <h4 class="aside-title">${title}</h4>
       </a> </figure> `;

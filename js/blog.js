@@ -30,9 +30,9 @@ function createHTML(result) {
       postContainer.innerHTML += `
        <figure class="blog-post-card">
        <a href="post.html?id=${post}"> <img src="${img}" alt="${alt}"/></a>
-       <p class="blog-date"<time>${postDate}</time>, By <a href="./about.html">Ine AW</a></p>
+       <p class="blog-date"<time>${postDate}</time> | By <a href="./about.html">Ine AW</a></p>
     <h3 class="carousel-title">${title}</h3>
-    <a href="post.html?id=${post}" class="blog-link">Read more</a>
+    <a href="post.html?id=${post}" class="blog-link" aria-label="read more about ${title}">Read more</a>
        </figure> `;
       loader.style.display = "none";
     }
@@ -59,9 +59,9 @@ morePosts.addEventListener("click", () => {
         postContainer.innerHTML += `
         <figure class="blog-post-card">
     <a href="post.html?id=${blogPost}"> <img src="${img}" alt="${alt}"/></a>
-    <p class="blog-date"<time>${postDate}</time>, By <a href="about.html">Ine AW</a></p>
+    <p class="blog-date"<time>${postDate}</time> | By <a href="about.html">Ine AW</a></p>
     <h3>${title}</h3>
-       <a href="post.html?id=${blogPost}" class="blog-link">Read more</a>
+       <a href="post.html?id=${blogPost}" class="blog-link" aria-label="read more about ${title}">Read more</a>
         </figure>`;
         morePosts.style.display = "none";
         loader.style.display = "none";

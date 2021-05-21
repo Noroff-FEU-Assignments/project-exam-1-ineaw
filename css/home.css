@@ -1,6 +1,3 @@
-main {
-  background-color: var(--white);
-}
 .header-home {
   width: 100%;
 }
@@ -9,9 +6,6 @@ main {
   display: flex;
   align-items: center;
 }
-/* .nav li:first-child {
-  box-shadow: inset 0 -0.2em hsla(347, 56%, 28%, 0.738);
-} */
 
 /* =====
 typography
@@ -56,7 +50,7 @@ typography
 }
 .newsletter-topic h2,
 .newsletter p {
-  color: var(--logo);
+  color: var(--logodark);
   text-align: center;
   margin-bottom: 10px;
 }
@@ -122,13 +116,11 @@ Hero
   flex-wrap: nowrap;
   max-height: 400px;
   max-width: 100vw;
-  padding: 0.5em;
   background-color: var(--highlight);
 }
 
 .carousel {
   display: flex;
-
   flex-direction: row;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -137,7 +129,13 @@ Hero
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scroll-padding: 50%;
+  padding: 1em;
 }
+
+/* .carousel-card::-webkit-scrollbar-thumb {
+  background-color: var(--headers);
+} */
+
 .carousel-container button {
   position: absolute;
   display: block;
@@ -179,7 +177,7 @@ Hero
   max-width: 100vw;
   /* margin: 1em 0.5em 1em 0.5em; */
   margin-right: 1em;
-  padding: 0em 0em 0.5em 0em;
+  padding: 0em 0em 1em 0em;
   background: var(--white);
   scroll-snap-align: center;
 }
@@ -192,7 +190,6 @@ Hero
   max-width: 100%;
   height: 250px;
   object-fit: cover;
-
   /* scroll-snap-align: center; */
   transition: transform 0.5s ease;
 }
@@ -204,11 +201,6 @@ Hero
   max-width: 320px;
   height: 100%;
 }
-
-/* .carousel-card:hover,
-.pop-post-card:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-} */
 
 /* =====
 Recent posts & Newsletter
@@ -235,8 +227,11 @@ Recent posts & Newsletter
   color: var(--accent);
   align-self: center;
 }
-
-.news .btn:hover {
+.news a {
+  color: var(--accent);
+}
+.news .btn:hover,
+.news a:hover {
   color: var(--lila-accent);
   background-color: var(--accent);
 }
@@ -252,7 +247,7 @@ Recent posts & Newsletter
 
 .newsletter .btn:hover,
 .newsletter .btn:focus {
-  color: var(--highlight);
+  color: var(--mainlight);
 }
 
 .sign-up {
@@ -265,12 +260,11 @@ Recent posts & Newsletter
   font-size: 1rem;
   padding: 0.4em;
   width: 220px;
-  border: 2px solid var(--accent);
+  border: none;
   background-color: var(--lila-accent);
   margin-right: 10px;
   margin-top: 8px;
-
-  /* box-shadow: inset 0 -0.2em hsl(102, 64%, 16%); */
+  box-shadow: inset 0 -0.2em var(--accent);
 }
 
 .newsletter input:focus {
@@ -302,9 +296,9 @@ Media Queries
     justify-content: flex-end;
   }
 
-  .carousel-container {
+  /* .carousel-container {
     padding: 4em;
-  }
+  } */
 
   .carousel-wrap button {
     font-size: 3rem;

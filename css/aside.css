@@ -23,7 +23,7 @@
   width: 200px;
   padding: 0.5em;
   font-size: 0.7rem;
-  box-shadow: inset 0 -0.2em hsl(336, 52%, 18%);
+  box-shadow: inset 0 -0.2em var(--accent);
 }
 
 .sideposts input:focus {
@@ -50,13 +50,6 @@
   margin: 20px 0px;
   background: var(--logo);
 }
-
-/* .aside-date,
-.sideposts .btn,
-.sideposts-recent p,
-.newsletter-text {
-  font-size: 0.9rem;
-} */
 
 @media (min-width: 801px) {
   .sideposts {
