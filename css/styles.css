@@ -6,9 +6,9 @@
   outline: none;
   text-decoration: none;
   font-family: "roboto", Helvetica, sans-serif;
-  margin: 0 auto;
   line-height: 1.7;
   font-size: 1rem;
+  margin: 0 auto;
 }
 :root {
   --body: #ebddde;
@@ -20,7 +20,7 @@
   --highlight2: #dfe5d6;
   --logo: #22593d;
   --logodark: #18432d;
-  --lila-accent: #dbcce4;
+  --lila-accent: #dbcce2;
   --lila-accent3: #dbcce9;
 
   --white: #fff;
@@ -30,11 +30,11 @@
 html,
 body {
   min-height: 100vh;
-  background-color: var(--lila-accent);
+  background-color: var(--white);
 }
 
 main {
-  background-color: var(--highlight);
+  background-color: var(--white);
 }
 
 /* =====
@@ -79,12 +79,13 @@ p {
   color: var(--text);
 }
 .blog-link {
-  /* text-decoration: underline; */
+  text-decoration: 2px solid underline;
+  text-underline-position: under;
   cursor: pointer;
   font-size: 1rem;
   font-family: "roboto", sans-serif;
   color: var(--logodark);
-  margin-right: 0.5em;
+  margin: 0em 0em 0em 1em;
 }
 
 .blog-link:hover,
@@ -96,8 +97,11 @@ p {
 .blog-date a,
 time {
   font-size: 0.8rem;
-  margin-left: 5px;
   color: var(--text);
+}
+
+.blog-date {
+  margin-left: 1em;
 }
 
 /* =====
@@ -158,4 +162,7 @@ Loader
 }
 
 @media (min-width: 801px) {
+  /* main {
+    margin: 0em 4em;
+  } */
 }

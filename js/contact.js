@@ -3,7 +3,7 @@ const fullName = document.querySelector("#fullName");
 const subject = document.querySelector("#subject");
 const email = document.querySelector("#email");
 const cMessage = document.querySelector("#contactMessage");
-const alertMessage = document.querySelector(".message");
+const sent = document.querySelector(".submit-button");
 
 const fullNameError = document.querySelector("#fullNameError");
 const subjectError = document.querySelector("#subjectError");
@@ -40,7 +40,7 @@ function validateForm(e) {
   }
 
   if (isValidated) {
-    alertMessage.innerHTML = `<div class="success-message">Your message has been sent</div>`;
+    sent.innerHTML = "Message sent!";
   }
 }
 

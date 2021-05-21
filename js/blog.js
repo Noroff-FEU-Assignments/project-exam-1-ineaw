@@ -15,7 +15,7 @@ async function getPosts() {
 getPosts();
 
 function createHTML(result) {
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 9; i++) {
     {
       const img = result[i]._embedded["wp:featuredmedia"]["0"].source_url;
       const alt = result[i]._embedded["wp:featuredmedia"]["0"].alt_text;
@@ -45,7 +45,7 @@ morePosts.addEventListener("click", () => {
       const response = await fetch(url + `?per_page=12` + `&_embed`);
       const results = await response.json();
       console.log(results);
-      for (let i = 8; i < results.length; i++) {
+      for (let i = 9; i < results.length; i++) {
         const img = results[i]._embedded["wp:featuredmedia"]["0"].source_url;
         const alt = results[i]._embedded["wp:featuredmedia"]["0"].alt_text;
         const postContent = results[i].excerpt.rendered;

@@ -3,7 +3,7 @@ Header Navigation
 ====== */
 .navigation {
   display: flex;
-  background-color: var(--lila-accent);
+  /* background-color: var(--lila-accent); */
 }
 .nav-content {
   width: 100%;
@@ -15,7 +15,7 @@ Header Navigation
   left: 100%;
   transform: translateX(0);
   transition: 400ms ease-in-out;
-  background-color: var(--lila-accent);
+  background-color: var(--white);
 }
 
 .nav-links {

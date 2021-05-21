@@ -1,9 +1,3 @@
-/* .nav li:nth-child(2) {
-  box-shadow: inset 0 -0.2em hsla(347, 56%, 28%, 0.738);
-} */
-main {
-  background-color: var(--white);
-}
 .blog-page-header {
   padding: 2em;
   color: var(--headers);
@@ -32,9 +26,9 @@ Blog posts
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 500px;
-  margin: 0px 10px;
-  padding: 0em 0em 1em 0em;
+  max-width: 400px;
+  margin: 0px 5px;
+  /* padding: 0em 0em 1em 0em; */
   background: var(--white);
   border-radius: 4px;
 }
@@ -57,7 +51,7 @@ Blog posts
 
 .blog-post-card h3,
 .blog-post-card p {
-  margin: 0px 15px;
+  margin: 0em;
 }
 
 .blog-date,
