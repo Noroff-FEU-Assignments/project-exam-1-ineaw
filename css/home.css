@@ -186,15 +186,21 @@ Newest posts
   justify-content: center;
   align-items: center;
   padding: 3em;
-  margin-top: 30px;
+  margin: 30px 100px 30px 100px;
 }
 
-.new-post-wrap {
+/* .new-post-wrap {
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr;
   margin-bottom: 30px;
   max-width: 70vw;
+} */
+.new-post-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .new-post-card img {
@@ -280,8 +286,13 @@ Media Queries
 /* Desktop Screens */
 
 @media only screen and (min-width: 801px) {
-  .new-post-wrap {
+  /* .new-post-wrap {
     grid-template-columns: 1fr 1fr;
+  } */
+
+  .new-post-wrap {
+    flex-direction: row;
+    align-items: center;
   }
 
   .sign-up {
@@ -310,8 +321,8 @@ Media Queries
     flex-wrap: nowrap;
   }
 
-  .new-post-wrap {
+  /* .new-post-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }
+  } */
 }
