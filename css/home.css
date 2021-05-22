@@ -15,16 +15,18 @@ typography
 
 .hero-title {
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 4rem;
   line-height: 55px;
   max-width: 600px;
   color: var(--accent);
 }
-
+.hero-btn {
+  font-size: 1.2em;
+}
 /* Carousel */
 
-.carousel h2 {
-  color: var(--accent);
+.carousel-container h2 {
+  color: var(--logodark);
 }
 
 .carousel-title {
@@ -32,6 +34,7 @@ typography
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  color: var(--logodark);
 }
 
 .carousel-title,
@@ -71,11 +74,12 @@ Hero
 .hero {
   background-color: var(--lila-accent);
   background-image: url(../images/succulent-side.jpg);
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0.231), rgba(255, 255, 255, 0.356), rgba(255, 255, 255, 0.066), rgba(227, 214, 214, 0)), url(../images/succulent-side.jpg); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   max-width: 100%;
-  height: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -93,7 +97,7 @@ Hero
 
 .carousel-container {
   padding: 2em;
-  background-color: var(--main);
+  background-color: var(--mainlight);
 }
 .carousel-wrap {
   display: flex;
@@ -130,10 +134,12 @@ Hero
 
 #next-btn {
   right: 0;
+  margin-right: 0px;
 }
 
 #prev-btn {
   left: 0;
+  margin-left: 0px;
 }
 
 #prev-btn:focus,
@@ -142,9 +148,6 @@ Hero
 #next-btn:hover {
   background: #ffffff83;
   border-radius: 2px;
-  /*height: 100px;
-  width: 100px;
-  */
 }
 
 .carousel-card,
@@ -155,7 +158,6 @@ Hero
   justify-content: space-between;
   max-width: 300px;
   height: auto;
-  /* margin: 1em 0.5em 1em 0.5em; */
   margin-right: 1em;
   padding: 0em 0em 1em 0em;
   background: var(--white);
@@ -176,37 +178,34 @@ Hero
 Newest posts
 ====== */
 
-.new-post-card {
-  max-width: 320px;
-  height: 100%;
-}
 .newest-posts {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 3em;
-  margin: 30px 100px 30px 100px;
 }
-
-/* .new-post-wrap {
+.new-post-wrap {
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr;
   margin-bottom: 30px;
   max-width: 70vw;
-} */
-.new-post-wrap {
+}
+
+.new-post-card {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 0px 5px;
+  padding: 0em 0em 1em 0em;
+  background: var(--white);
 }
 
 .new-post-card img {
   height: auto;
-  max-width: 100%;
-  overflow: hidden;
+  max-width: 300px;
   transition: 0.3s all ease-in-out;
 }
 
@@ -235,6 +234,7 @@ Newsletter
   color: var(--accent);
   align-self: center;
 }
+.news h2,
 .news a {
   color: var(--accent);
 }
@@ -286,13 +286,8 @@ Media Queries
 /* Desktop Screens */
 
 @media only screen and (min-width: 801px) {
-  /* .new-post-wrap {
-    grid-template-columns: 1fr 1fr;
-  } */
-
   .new-post-wrap {
-    flex-direction: row;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
   }
 
   .sign-up {
@@ -302,6 +297,16 @@ Media Queries
 
   .carousel-wrap button {
     font-size: 3rem;
+  }
+
+  #next-btn {
+    right: 0;
+    margin-right: 2vw;
+  }
+
+  #prev-btn {
+    left: 0;
+    margin-left: 2vw;
   }
 }
 
@@ -321,8 +326,8 @@ Media Queries
     flex-wrap: nowrap;
   }
 
-  /* .new-post-wrap {
+  .new-post-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  } */
+  }
 }
