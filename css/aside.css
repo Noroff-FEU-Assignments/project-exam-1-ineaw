@@ -51,6 +51,10 @@
   background: var(--logo);
 }
 
+.blog-date {
+  margin-left: 0em;
+}
+
 @media (min-width: 801px) {
   .sideposts {
     width: 250px;

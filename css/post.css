@@ -57,7 +57,7 @@ Blog Post
   display: none;
 }
 
-.blog-text h2 {
+.blog-text h1 {
   padding: 10px;
 }
 
@@ -111,11 +111,6 @@ Modal
   height: 3px;
   margin: 0px 0px 20px 0px;
   background: var(--logo);
-}
-
-.email-error p {
-  color: rgb(105, 20, 20);
-  font-size: 0.9rem;
 }
 
 /* ======

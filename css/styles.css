@@ -1,3 +1,5 @@
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text&display=swap"); */
+
 *,
 *:before,
 *:after {
@@ -6,8 +8,8 @@
   outline: none;
   text-decoration: none;
   font-family: "roboto", Helvetica, sans-serif;
-  line-height: 1.7;
-  font-size: 1rem;
+  line-height: 1.5;
+  font-size: 16px;
   margin: 0 auto;
   scroll-behavior: smooth;
 }
@@ -34,20 +36,23 @@ body {
 typography
 ===== */
 
+.logo {
+  max-width: 300px;
+  padding: 0.5em;
+  justify-self: center;
+}
+
 h1 {
-  font-family: "DM serif display", serif;
-  font-weight: 800;
   text-align: center;
-  font-size: 4rem;
-  line-height: 60px;
-  color: var(--logodark);
-  padding: 0.2em;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 h2 {
   text-align: center;
   font-size: 3rem;
-  line-height: 45px;
+  line-height: 1.1;
   margin-bottom: 20px;
 }
 
@@ -61,6 +66,7 @@ h4 {
   line-height: 25px;
 }
 
+h1,
 h2,
 h3,
 h4 {
@@ -143,6 +149,19 @@ Loader
   border: 8px solid var(--mainlight);
   border-color: var(--mainlight) transparent var(--mainlight) transparent;
   animation: loader 0.8s linear infinite;
+}
+/* Error-& success messages */
+
+.message {
+  border: none;
+  color: var(--accent);
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
+.email-error p {
+  color: rgb(105, 20, 20);
+  font-size: 0.9rem;
 }
 
 @keyframes loader {

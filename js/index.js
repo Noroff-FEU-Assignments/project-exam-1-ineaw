@@ -1,6 +1,6 @@
 const url = "https://ineaw.no/the-green-side/wp-json/wp/v2/posts";
 
-const recentPosts = document.querySelector(".pop-post-wrap");
+const recentPosts = document.querySelector(".new-post-wrap");
 const aside = document.querySelector(".sideposts");
 const carouselContainer = document.querySelector(".carousel");
 const carouselCard = document.querySelector(".carousel-card");
@@ -15,7 +15,6 @@ async function getPosts() {
     for (let i = 0; i < posts.length; i++) {
       const img = posts[i]._embedded["wp:featuredmedia"]["0"].source_url;
       const alt = posts[i]._embedded["wp:featuredmedia"]["0"].alt_text;
-
       const post = posts[i].id;
       const postContent = posts[i].excerpt.rendered;
       const title = posts[i].title.rendered;
@@ -23,11 +22,12 @@ async function getPosts() {
         month: "long",
         day: "2-digit",
       });
+
       recentPosts.innerHTML += `
-      <figure class="pop-post-card">
+      <figure class="new-post-card">
       <a href="post.html?id=${post}"> <img src="${img}" alt="${alt}"/> </a>
       <figcaption class="blog-date"<time>${postDate}</time> | By <a href="about.html">Ine AW</a></figcaption>
-      <h3 class="pop-post-title">${title}</h3>
+      <h3 class="new-post-title">${title}</h3>
       <a href="post.html?id=${post}" class="blog-link" aria-label="read more about ${title}">Read more</a>
       </figure>`;
 

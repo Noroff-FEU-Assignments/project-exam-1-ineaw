@@ -3,7 +3,7 @@
   <head>
     <title>The Green Side Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="data:," />
+    <link rel="shortcut icon" type="image/png" href="images/tgs-icon-bg.png" />
     <meta name="description" content="Blog for plant nerds and newbies with information and facts about house plants, green plants, airplants and how to make them grow and to care for them" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,11 +16,9 @@
   </head>
   <body>
     <header>
-      <a class="logo" href="index.html">
-        <h1>The Green Side</h1>
-      </a>
-      <section class="navigation">
-        <div class="nav-container">
+      <div class="navigation">
+        <a href="index.html"><img class="logo" src="images/logo-tgs.png" alt="home button" /></a>
+        <section class="nav-container">
           <button aria-label="open navigation" class="open-nav">☰</button>
           <nav class="nav-content">
             <button aria-label="close navigation" class="close-nav">×</button>
@@ -31,13 +29,14 @@
               <li><a href="contact.html" class="nav-link" aria-label="Contact me">Contact</a></li>
             </ul>
           </nav>
-        </div>
+          </div>
       </section>
+      </div>
     </header>
     <main>
       <section class="hero">
         <header class="hero-card">
-          <h2 class="hero-title">Level up your plant parenting</h2>
+          <h1 class="hero-title">Level up your plant parenting</h1>
         </header>
       </section>
       <article>
@@ -61,9 +60,8 @@
           <button id="next-btn">&#10095;</button>
         </section>
       </article>
-      <article class="popular-posts">
-        <!-- <h2>Recent stories</h2> -->
-        <section class="pop-post-wrap">
+      <article class="newest-posts">
+        <section class="new-post-wrap">
           <div class="loader"></div>
         </section>
       </article>
@@ -73,7 +71,7 @@
         </div>
         <p class="newsletter-text">Sign up to our newsletter and get a regular dose of inspiration and motivation, <em>delivered to your inbox.</em></p>
         <div class="sign-up">
-          <label for="text">
+          <label for="newsletter">
             <input type="text" placeholder="Enter your e-mail address" id="signup-email" name="newsletter" aria-label="newsletter sign-up form" />
           </label>
           <button class="btn signup" role="button">Sign up</button>
@@ -102,8 +100,8 @@
           <li class="social-link"><a href="#">Soundcloud</a></li>
         </ul>
       </section>
+      <p class="copyright">© Copyright 2021. All rights reserved. Website by Ine AW.</p>
     </footer>
-    <p class="copyright">© Copyright 2021. All rights reserved. Website by Ine AW.</p>
     <script src="js/index.js"></script>
     <script src="js/components/carousel.js"></script>
     <script src="js/components/navigation.js"></script>

@@ -4,6 +4,7 @@ const postContainer = document.querySelector(".blog-text");
 const postImage = document.querySelector(".post-image");
 const modalImage = document.querySelector(".post-modal");
 const changeTitle = document.querySelector("title");
+const breadcrumbs = document.querySelector(".breadcrumbs");
 
 const queryString = document.location.search;
 
@@ -14,6 +15,8 @@ async function getPosts() {
   try {
     const response = await fetch(url + id + "?_embed");
     const post = await response.json();
+    breadcrumbs.innerHTML = "";
+
     const newDate = new Date(post.date).toLocaleString("en-US", {
       month: "long",
       day: "2-digit",
@@ -27,17 +30,22 @@ async function getPosts() {
 
     postImage.innerHTML = `
      <header class="blog-header">
-     <h2>${post.title.rendered}</h2>   
+     <h1>${post.title.rendered}</h1>   
      <div class="blog-date"> Posted <time datetime="2021-04-21">${newDate}</time> | by Ine AW</div>
      </header>
-    <figure class="post-image"><img src="${img}" alt="${alt}"/></figure>
-
+     <figure class="post-image"><img src="${img}" alt="${alt}"/></figure>
 `;
     postContainer.innerHTML = `  
-    <article>${post.content.rendered}</article>
+     <article>${post.content.rendered}</article>
 `;
     modalImage.innerHTML = `<figure class="post-image-modal">          
-    <img src="${img}" alt="${alt}"/>
+     <img src="${img}" alt="${alt}"/>
+`;
+
+    breadcrumbs.innerHTML += `   
+     <li><a href="index.html">Home</a></li>
+     <li><a href="blog.html">Blog</a></li>
+     <li><p>${post.title.rendered}</p></li>
 `;
   } catch (error) {
     console.log(error);

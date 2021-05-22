@@ -21,10 +21,11 @@ async function getRecent() {
       });
       aside.innerHTML += `
       <figure class="recent-image">
-      <a href="post.html?id=${post}"> <img src="${img}" alt="${alt}"/> 
-      <p class="blog-date">By Ine AW, Posted <time>${postDate}</time></p>
+       <a href="post.html?id=${post}"> <img src="${img}" alt="${alt}"/> 
+       <p class="blog-date">Posted <time>${postDate} | By Ine AW </time></p>
       <h4 class="aside-title">${title}</h4>
-      </a> </figure> `;
+       </a>
+      </figure> `;
     }
   } catch (error) {
     console.log(error);
