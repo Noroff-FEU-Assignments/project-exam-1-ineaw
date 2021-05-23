@@ -46,8 +46,7 @@ Aside
   flex-direction: column;
 }
 
-.recent-image::after,
-.newsletter-aside::after {
+.recent-image::after {
   content: "";
   display: block;
   width: 100%;
