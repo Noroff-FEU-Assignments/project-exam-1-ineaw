@@ -1,3 +1,7 @@
+/* =====
+Aside
+===== */
+
 .sideposts {
   grid-area: sidebar;
   display: flex;
@@ -5,7 +9,7 @@
   background-color: var(--lila-accent);
   padding: 1em;
   border-radius: 4px;
-  max-width: 400px;
+  max-width: 100vw;
 }
 
 .sideposts h4 {
@@ -41,6 +45,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .recent-image::after,
 .newsletter-aside::after {
   content: "";
@@ -48,7 +53,7 @@
   width: 100%;
   height: 3px;
   margin: 20px 0px;
-  background: var(--logo);
+  background: var(--green);
 }
 
 .blog-date {
@@ -63,6 +68,7 @@
   .sideposts input {
     background-color: transparent;
   }
+
   .sign-up {
     display: flex;
     flex-direction: column;

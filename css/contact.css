@@ -1,14 +1,16 @@
 #contactForm {
   max-width: 600px;
-  background-color: var(--main);
+  background-color: var(--lila-accent);
   padding: 2em;
 }
+
 #contactForm label {
   display: block;
   margin: 10px 20px;
-  color: var(--logo);
+  color: var(--green);
   text-align: left;
 }
+
 #contactForm input,
 #contactForm textarea {
   width: 100%;
@@ -24,7 +26,7 @@
 }
 
 .submit-button {
-  color: var(--logo);
+  color: var(--green);
   margin: 20px;
 }
 

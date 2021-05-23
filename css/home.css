@@ -1,12 +1,3 @@
-.header-home {
-  width: 100%;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-}
-
 /* =====
 typography
 ===== */
@@ -14,19 +5,21 @@ typography
 /* Hero */
 
 .hero-title {
-  font-weight: 800;
   font-size: 4rem;
   line-height: 55px;
   max-width: 600px;
-  color: var(--accent);
+  color: var(--accent-vibrant);
+  margin-bottom: 10vh;
 }
+
 .hero-btn {
   font-size: 1.2em;
 }
+
 /* Carousel */
 
 .carousel-container h2 {
-  color: var(--logodark);
+  color: var(--green);
 }
 
 .carousel-title {
@@ -34,61 +27,61 @@ typography
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  color: var(--logodark);
+  color: var(--green);
 }
 
 .carousel-title,
 .new-post-title {
   font-weight: 400;
   font-size: 1.5rem;
-  margin: 0em 0.5em;
+  margin: 0em;
 }
+
 /* News & Newsletter */
+
+.news h2,
+.news a {
+  color: var(--accent);
+}
 
 .news-text {
   font-size: 1rem;
-  max-width: 600px;
+  max-width: 550px;
 }
+
 .newsletter-topic h2,
 .newsletter p {
-  color: var(--logodark);
+  color: var(--green);
   text-align: center;
   margin-bottom: 10px;
 }
 
 .newsletter p {
   font-size: 1rem;
-  max-width: 500px;
+  max-width: 450px;
 }
 
 /* =====
 Hero
 ===== */
 
-.hero-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 .hero {
   background-color: var(--lila-accent);
   background-image: url(../images/succulent-side.jpg);
-  /* background-image: linear-gradient(rgba(255, 255, 255, 0.231), rgba(255, 255, 255, 0.356), rgba(255, 255, 255, 0.066), rgba(227, 214, 214, 0)), url(../images/succulent-side.jpg); */
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   max-width: 100%;
-  height: 300px;
+  height: 600px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   text-align: center;
 }
 
 .hero-card {
-  width: 100%;
-  padding: 1em;
+  padding: 3em;
+  margin-left: 0px;
+  margin-top: 10vh;
 }
 
 /* =====
@@ -97,12 +90,12 @@ Hero
 
 .carousel-container {
   padding: 2em;
-  background-color: var(--mainlight);
 }
+
 .carousel-wrap {
   display: flex;
   flex-wrap: nowrap;
-  max-height: 400px;
+  max-height: 50vh;
   max-width: 100vw;
 }
 
@@ -128,7 +121,7 @@ Hero
   font-size: 3rem;
   cursor: pointer;
   margin-top: 150px;
-  color: var(--logo);
+  color: var(--green);
   z-index: 3;
 }
 
@@ -150,23 +143,21 @@ Hero
   border-radius: 2px;
 }
 
-.carousel-card,
-.new-post-card {
+.carousel-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   max-width: 300px;
   height: auto;
-  margin-right: 1em;
-  padding: 0em 0em 1em 0em;
-  background: var(--white);
+  margin-right: 2em;
 }
 
 .carousel-card {
   overflow: hidden;
   scroll-snap-align: center;
 }
+
 .carousel-card img {
   max-width: 100%;
   height: 250px;
@@ -183,30 +174,28 @@ Newest posts
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3em;
 }
+
 .new-post-wrap {
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr;
   margin-bottom: 30px;
-  max-width: 70vw;
+  max-width: 100vw;
 }
 
 .new-post-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 300px;
+  max-width: 100%;
   margin: 0px 5px;
   padding: 0em 0em 1em 0em;
-  background: var(--white);
 }
 
 .new-post-card img {
   height: auto;
-  max-width: 300px;
-  transition: 0.3s all ease-in-out;
+  max-width: 100%;
 }
 
 /* =====
@@ -223,6 +212,7 @@ Newsletter
 }
 
 /* headline news section */
+
 .news {
   color: var(--accent);
   width: 100%;
@@ -234,10 +224,7 @@ Newsletter
   color: var(--accent);
   align-self: center;
 }
-.news h2,
-.news a {
-  color: var(--accent);
-}
+
 .news .btn:hover,
 .news a:hover {
   color: var(--lila-accent);
@@ -245,12 +232,12 @@ Newsletter
 }
 
 /* Newsletter */
+
 .newsletter {
   background-color: var(--lila-accent);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
 }
 
 .newsletter .btn:hover,
@@ -264,6 +251,7 @@ Newsletter
   justify-content: center;
   align-items: center;
 }
+
 .newsletter input {
   font-size: 1rem;
   padding: 0.4em;
@@ -276,7 +264,12 @@ Newsletter
 }
 
 .newsletter input:focus {
-  background-color: #ffffff;
+  background-color: var(--white);
+}
+
+.email-error p {
+  color: rgb(105, 20, 20);
+  font-size: 0.9rem;
 }
 
 /* =====
@@ -288,25 +281,14 @@ Media Queries
 @media only screen and (min-width: 801px) {
   .new-post-wrap {
     grid-template-columns: 1fr 1fr;
+    max-width: 100vw;
   }
-
   .sign-up {
     flex-direction: row;
     justify-content: flex-end;
   }
-
   .carousel-wrap button {
     font-size: 3rem;
-  }
-
-  #next-btn {
-    right: 0;
-    margin-right: 2vw;
-  }
-
-  #prev-btn {
-    left: 0;
-    margin-left: 2vw;
   }
 }
 
@@ -320,6 +302,7 @@ Media Queries
   .hero-title {
     font-size: 4rem;
   }
+
   .info {
     display: flex;
     flex-direction: row;
