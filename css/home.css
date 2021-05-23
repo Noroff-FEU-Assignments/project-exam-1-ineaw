@@ -41,24 +41,15 @@ typography
 /* News & Newsletter */
 
 .news h2,
-.news a {
+.news a,
+.news-text,
+.newsletter p,
+.newsletter h2 {
   color: var(--accent);
 }
 
-.news-text {
-  font-size: 1rem;
-  max-width: 550px;
-}
-
-.newsletter-topic h2,
+.news-text,
 .newsletter p {
-  color: var(--green);
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.newsletter p {
-  font-size: 1rem;
   max-width: 450px;
 }
 
@@ -67,7 +58,6 @@ Hero
 ===== */
 
 .hero {
-  background-color: var(--lila-accent);
   background-image: url(../images/succulent-side.jpg);
   background-size: cover;
   background-position: bottom;
@@ -281,6 +271,11 @@ Media Queries
     grid-template-columns: 1fr 1fr;
   }
 
+  .hero-card {
+    padding: 3em;
+    margin-left: 5vw;
+  }
+
   .new-post-wrap,
   .carousel {
     max-width: 80vw;
@@ -308,10 +303,6 @@ Media Queries
 /* Larger desktop screens */
 
 @media only screen and (min-width: 1280px) {
-  .hero-card {
-    padding: 2em;
-  }
-
   .hero-title {
     font-size: 4rem;
   }
