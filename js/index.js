@@ -7,7 +7,7 @@ const carouselCard = document.querySelector(".carousel-card");
 
 async function getPosts() {
   try {
-    const response = await fetch(url + `?per_page=9&_embed`);
+    const response = await fetch(url + `?per_page=8&_embed`);
     const posts = await response.json();
     recentPosts.innerHTML = "";
     carouselContainer.innerHTML = "";
