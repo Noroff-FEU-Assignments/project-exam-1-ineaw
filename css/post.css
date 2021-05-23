@@ -17,7 +17,6 @@ Blog Post
   grid-template-areas:
     "postimage"
     "blogtext"
-    "careinfo"
     "comment"
     "sidebar";
 }
@@ -28,8 +27,7 @@ Blog Post
 
 .sideposts-header,
 .post-subheader,
-.sideposts-recent,
-.care-info-header {
+.sideposts-recent {
   margin: 10px 0px 10px 0px;
 }
 
@@ -49,6 +47,7 @@ Blog Post
 .text-container {
   margin-top: 40px;
 }
+
 .blog-text {
   grid-area: blogtext;
   max-width: 500px;
@@ -100,13 +99,12 @@ Modal
 }
 
 /* additional */
-.care-info {
+/* .care-info {
   grid-area: careinfo;
   text-align: center;
-}
+} */
 
-.blog-header::after,
-.care-info-header::after {
+.blog-header::after {
   content: "";
   display: block;
   width: 100%;
@@ -158,7 +156,6 @@ Media Queries
     grid-template-areas:
       "postimage postimage sidebar"
       "blogtext blogtext  sidebar"
-      "careinfo careinfo ...."
       "comment comment ....";
   }
 

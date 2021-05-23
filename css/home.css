@@ -6,10 +6,11 @@ typography
 
 .hero-title {
   font-size: 4rem;
-  line-height: 55px;
+  font-weight: 400;
   max-width: 600px;
   color: var(--accent-vibrant);
   margin-bottom: 10vh;
+  text-align: left;
 }
 
 .hero-btn {
@@ -72,16 +73,15 @@ Hero
   background-position: bottom;
   background-repeat: no-repeat;
   max-width: 100%;
-  height: 70vh;
+  height: 500px;
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 
 .hero-card {
   padding: 3em;
   margin-left: 0px;
-  margin-top: 10vh;
+  margin-top: 5vh;
   margin-bottom: 5vh;
 }
 
@@ -90,7 +90,7 @@ Hero
   ===== */
 
 .carousel-container {
-  padding: 2em;
+  padding: 3em;
 }
 
 .carousel-wrap {
@@ -280,15 +280,22 @@ Media Queries
 @media only screen and (min-width: 801px) {
   .new-post-wrap {
     grid-template-columns: 1fr 1fr;
-    max-width: 100vw;
   }
+
+  .new-post-wrap,
+  .carousel {
+    max-width: 80vw;
+  }
+
   .sign-up {
     flex-direction: row;
     justify-content: flex-end;
   }
+
   .carousel-wrap button {
     font-size: 3rem;
   }
+
   .newsletter input {
     background-color: var(--lila-accent);
     box-shadow: inset 0 -0.2em var(--accent);
