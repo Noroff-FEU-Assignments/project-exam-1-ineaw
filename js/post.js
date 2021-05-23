@@ -38,8 +38,11 @@ async function getPosts() {
     postContainer.innerHTML = `  
      <article>${post.content.rendered}</article>
 `;
-    modalImage.innerHTML = `<figure class="post-image-modal">          
+    modalImage.innerHTML = `<section class="modal-content>
+    <div class="btn close">X</div>
+    <figure class="post-image-modal">          
      <img src="${img}" alt="${alt}"/>
+   </section>
 `;
 
     breadcrumbs.innerHTML += `   

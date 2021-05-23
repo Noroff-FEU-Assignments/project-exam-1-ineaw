@@ -84,7 +84,10 @@ Modal
   transition: all 0.35s ease-in;
   z-index: 3;
 }
-
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
 .post-image-modal img {
   display: block;
   height: auto;
